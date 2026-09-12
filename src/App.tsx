@@ -168,7 +168,7 @@ export default function App() {
               <div className="text-xs text-slate-400 dark:text-slate-500 font-medium hidden lg:flex items-center gap-2 flex-shrink-0">
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
                 <span>
-                  三麗鷗彩虹樂園 · 澀谷原宿 · 池袋吉伊卡哇 · 迪士尼 · 吉卜力 · 秋葉原
+                  三麗鷗彩虹樂園 · 澀谷原宿 · 池袋吉伊卡哇 · 淺草晴空塔 · 吉祥寺 · 秋葉原
                 </span>
               </div>
             </div>

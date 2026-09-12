@@ -31,9 +31,9 @@ export const INITIAL_TODOS: TodoItem[] = [
   },
   {
     id: 'sanrio_ticket',
-    label: '購買 三麗鷗彩虹樂園 (Sanrio Puroland) 門票 (還沒買票)',
-    checked: false,
-    comment: '預計 9/20 前往，需先購票',
+    label: '三麗鷗彩虹樂園 (Sanrio Puroland) 門票 (已買好票)',
+    checked: true,
+    comment: '門票已買好，預計 9/20 開園前往',
     mapUrl: 'https://maps.app.goo.gl/z9d3W3XnQy4E6m7z8',
     mapName: '三麗鷗彩虹樂園',
   },
@@ -76,22 +76,6 @@ export const INITIAL_TODOS: TodoItem[] = [
     comment: '池袋西口壽喜燒名店',
     mapUrl: 'https://maps.app.goo.gl/3EDfwxPp6596Hs2f6',
     mapName: '月亭 池袋店',
-  },
-  {
-    id: 'disney_ticket',
-    label: '購買 東京迪士尼樂園 / 海洋門票 (Disney App 或 Klook)',
-    checked: false,
-    comment: '9/23 全天迪士尼',
-    mapUrl: 'https://www.tokyodisneyresort.jp/tc/index.html',
-    mapName: '迪士尼官網',
-  },
-  {
-    id: 'ghibli_ticket',
-    label: '預訂 三鷹之森吉卜力美術館門票 (每月10號開搶隔月門票)',
-    checked: false,
-    comment: '9/25 參觀，採完全預約制',
-    mapUrl: 'https://www.ghibli-museum.jp/ticket/',
-    mapName: '吉卜力購票官網',
   },
   {
     id: 'buffet',
@@ -187,7 +171,7 @@ export const ITINERARY_DATA: DayPlan[] = [
       {
         time: '10:00 - 17:00',
         title: '暢遊三麗鷗彩虹樂園 (Sanrio Puroland)',
-        description: '全室內夢幻主題樂園（還沒買票，記得先預訂）！不受天氣影響，暢玩 Kitty 女士之宅、美樂蒂大耳狗美照專區、觀看超精彩室內聲光大遊行表演、採購限定三麗鷗玩偶周邊，並在主題餐廳品嚐超可愛角色咖哩飯與造型甜點。',
+        description: '全室內夢幻主題樂園（門票已買好！持憑證即可入場）！不受天氣影響，暢玩 Kitty 女士之宅、美樂蒂大耳狗美照專區、觀看超精彩室內聲光大遊行表演、採購限定三麗鷗玩偶周邊，並在主題餐廳品嚐超可愛角色咖哩飯與造型甜點。',
         type: 'activity',
         locations: [
           {
@@ -366,37 +350,57 @@ export const ITINERARY_DATA: DayPlan[] = [
   },
   {
     date: '9/23 (二)',
-    title: '夢幻奇幻世界：東京迪士尼樂園全日遊',
+    title: '下町風情 ＆ 東京晴空塔：淺草雷門 ➔ 晴空街道 ➔ 銀座漫步',
     activities: [
       {
-        time: '07:30 - 08:30',
-        title: '出發前往舞濱 · 東京迪士尼度假區',
-        description: '搭乘電車抵達 JR 舞濱站，提早前往迪士尼樂園園區門口排隊準備開園。',
-        type: 'transport',
-        locations: [
-          {
-            name: 'JR 舞濱站 (Maihama)',
-            url: 'https://maps.app.goo.gl/jL2dwhp4e63i5YqQ8',
-          },
-        ],
-      },
-      {
-        time: '08:30 - 21:00',
-        title: '全天暢遊東京迪士尼 (Tokyo Disney Resort)',
-        description: '沉浸在童話童真的魔法世界中！入園立刻使用 Disney App 抽取預約等候卡與 DPA；暢玩美女與野獸、太空山、幽靈公館、小熊維尼獵蜜記等熱門設施；欣賞壯麗的日間遊行、夜間電子大遊行與灰姑娘城堡夜間煙火秀。',
+        time: '09:30 - 12:00',
+        title: '淺草寺 (Senso-ji) · 雷門與仲見世通商店街',
+        description: '走訪東京最古老寺廟淺草寺！在巨大的「雷門」紅燈籠前合影，漫步於江戶風情洋溢的仲見世通商店街，品嚐現烤仙貝、人形燒、抹茶冰淇淋，並至本堂參拜祈福求籤。',
         type: 'activity',
         locations: [
           {
-            name: '東京迪士尼樂園 (Tokyo Disneyland)',
-            url: 'https://maps.app.goo.gl/wYdK65z5C5QxU8hR9',
+            name: '淺草寺 (雷門)',
+            url: 'https://maps.app.goo.gl/wJ1q5K7o5E4y3N8T9',
           },
         ],
       },
       {
-        time: '21:30 - 22:30',
-        title: '滿載歡樂搭車返回 Airbnb',
-        description: '搭乘電車返程，帶回滿滿的紀念品與美好回憶，回民宿好好泡澡休息。',
-        type: 'transport',
+        time: '12:00 - 15:30',
+        title: '東京晴空塔 (Tokyo Skytree) ＆ 晴空街道 Solamachi 購物美食',
+        description: '前往東京最高地標晴空塔！商場「東京晴空街道」匯聚超過 300 家店舖，包含 Chiikawa Land (吉伊卡哇專賣店 晴空塔店)、寶可夢中心晴空塔店、日系潮流雜貨及伴手禮專區；中午在此品嚐豐富午餐美食。',
+        type: 'shopping',
+        locations: [
+          {
+            name: '東京晴空塔 (Tokyo Skytree)',
+            url: 'https://maps.app.goo.gl/s4X5y9T6dM1v7YpQ8',
+          },
+          {
+            name: '東京晴空街道 (Tokyo Solamachi)',
+            url: 'https://maps.app.goo.gl/4N3r6x7b1G2m5T8p9',
+          },
+        ],
+      },
+      {
+        time: '15:30 - 18:30',
+        title: '銀座 (Ginza) 高級時尚旗艦街區漫步',
+        description: '搭乘地鐵至優雅精緻的銀座商圈！探訪 GINZA SIX、伊東屋 (G.Itoya 12層文具旗艦大樓)、Uniqlo 銀座全球旗艦店，享受高級都會氛圍。',
+        type: 'shopping',
+        locations: [
+          {
+            name: '銀座 GINZA SIX',
+            url: 'https://maps.app.goo.gl/e4f5T6u7m2b3c4x57',
+          },
+          {
+            name: '銀座 伊東屋 (G.Itoya)',
+            url: 'https://maps.app.goo.gl/m7u8v9x1b2c3d4e58',
+          },
+        ],
+      },
+      {
+        time: '18:30 - 21:00',
+        title: '市區精緻晚餐與返回 Airbnb',
+        description: '在銀座享用精緻晚餐（如銀座篝雞白湯拉麵、炸豬排或壽司），飯後輕鬆散步搭乘地鐵返回 Airbnb 休息。',
+        type: 'food',
       },
     ],
   },
@@ -478,7 +482,7 @@ export const ITINERARY_DATA: DayPlan[] = [
       },
       {
         time: '15:30 - 18:30',
-        title: '吉祥寺商圈漫步 ＆ 井之頭恩賜公園 (或三鷹之森吉卜力)',
+        title: '吉祥寺商圈漫步 ＆ 井之頭恩賜公園悠閒散策',
         description: '前往被評為最想居住街區的吉祥寺！漫步綠意盎然的井之頭恩賜公園享受自然芬多精，探訪吉祥寺 Sun Road 商店街、必吃排隊名店 Satou 黑毛和牛炸牛肉丸、鯛魚燒，以及風格各異的日式生活雜貨小店。',
         type: 'shopping',
         locations: [
@@ -489,10 +493,6 @@ export const ITINERARY_DATA: DayPlan[] = [
           {
             name: '井之頭恩賜公園',
             url: 'https://maps.app.goo.gl/Yf6N2w8K3Q5s9VmB9',
-          },
-          {
-            name: '三鷹之森吉卜力美術館 (外圍綠意/預約參觀)',
-            url: 'https://maps.app.goo.gl/Lz4V9u6E4J9Q1wGk8',
           },
         ],
       },
@@ -744,11 +744,11 @@ export const OFFICIAL_LINKS = [
     url: 'https://tw.puroland.jp/',
   },
   {
-    name: '東京迪士尼度假區 (Tokyo Disney Resort) 官方中文網',
-    url: 'https://www.tokyodisneyresort.jp/tc/index.html',
+    name: '東京晴空塔 (Tokyo Skytree) 官方中文網',
+    url: 'https://www.tokyo-skytree.jp/cn_t/',
   },
   {
-    name: '三鷹之森吉卜力美術館 官方中文票務指南',
-    url: 'https://www.ghibli-museum.jp/ticket/',
+    name: '池袋太陽城 (Sunshine City) 官方中文指南',
+    url: 'https://sunshinecity.jp/zh-tw/',
   },
 ];

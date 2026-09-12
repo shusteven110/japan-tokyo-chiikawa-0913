@@ -1,0 +1,6 @@
+{
+  "name": "Tokyo Adventure · 東京自由行",
+  "description": "東京自由行 9 天 8 夜完整旅遊行程表與行前待辦、注意事項指南（三麗鷗彩虹樂園、澀谷原宿、池袋吉伊卡哇、迪士尼、吉卜力、秋葉原）。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

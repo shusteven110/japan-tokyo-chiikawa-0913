@@ -3,9 +3,9 @@ import { DayPlan, TodoItem, TipCategory } from '../types';
 export const INITIAL_TODOS: TodoItem[] = [
   {
     id: 'vjw',
-    label: '填寫 Visit Japan Web (VJW) 入境審查與海關申報 QR Code',
-    checked: false,
-    comment: '',
+    label: '填寫 Visit Japan Web (VJW) 入境審查與海關申報 QR Code (已填好)',
+    checked: true,
+    comment: '已填寫完成！請截圖保存入境審查與海關申報 QR Code 便於離線通關',
     mapUrl: 'https://www.vjw.digital.go.jp/',
     mapName: 'VJW 官方網站',
   },
@@ -13,7 +13,7 @@ export const INITIAL_TODOS: TodoItem[] = [
     id: 'skyliner',
     label: '確認 Skyliner 車票 (已在 Trip.com 訂好票，出示憑證兌換)',
     checked: true,
-    comment: 'Trip.com 訂好票',
+    comment: 'Trip.com 已訂好票，抵達機場後兌換',
     mapUrl: 'https://maps.app.goo.gl/kX72k1W2yZ7W2tqT9',
     mapName: '成田機場 Skyliner 乘車處',
   },
@@ -38,18 +38,34 @@ export const INITIAL_TODOS: TodoItem[] = [
     mapName: '三麗鷗彩虹樂園',
   },
   {
-    id: 'araiya',
-    label: '預約 燒肉內臟 Araiya 澀谷 (尚未預訂)',
+    id: 'ticket_skytree',
+    label: '購買 9/23 (三) 東京晴空塔展望台 ＆ 墨田水族館 門票 (還沒買)',
     checked: false,
-    comment: '極難訂位，盡早至 Tabelog 預約',
-    mapUrl: 'https://tabelog.com/tw/tokyo/A1303/A130301/13237382/',
-    mapName: 'Araiya Tabelog 頁面',
+    comment: '還沒買，建議提前於 Klook / KKday 預訂 350m展望台＋水族館聯票',
+    mapUrl: 'https://maps.google.com/?q=Tokyo+Skytree',
+    mapName: '東京晴空塔',
+  },
+  {
+    id: 'ticket_skywalk',
+    label: '購買 9/24 (四) 三島天空步道 (Mishima Skywalk) 門票 (還沒買)',
+    checked: false,
+    comment: '還沒買，可至官網或現場購買，活動期間為大耳狗限定版票面',
+    mapUrl: 'https://maps.google.com/?q=Mishima+Skywalk',
+    mapName: '三島天空步道',
+  },
+  {
+    id: 'ticket_disney',
+    label: '購買 9/26 (六) 東京迪士尼樂園門票 一日護照 (還沒買)',
+    checked: false,
+    comment: '還沒買，週六熱門場次務必提前至官網/Klook預訂並綁定官方 App',
+    mapUrl: 'https://maps.google.com/?q=Tokyo+Disneyland',
+    mapName: '東京迪士尼樂園',
   },
   {
     id: 'chiikawa_922',
     label: '確認 9/22 (二) 池袋吉依卡哇門票 (已預約 15:00 入場)',
     checked: true,
-    comment: '門票時間 15:00',
+    comment: '門票時間：9/22 15:00',
     mapUrl: 'https://maps.app.goo.gl/1aG5TRwa9nWRuVdz9',
     mapName: 'Chiikawa Park 池袋',
   },
@@ -57,23 +73,41 @@ export const INITIAL_TODOS: TodoItem[] = [
     id: 'chiikawa_925',
     label: '確認 9/25 (五) 吉依卡哇門票 (已預約 12:00 入場)',
     checked: true,
-    comment: '門票時間 12:00',
+    comment: '門票時間：9/25 12:00',
     mapUrl: 'https://maps.app.goo.gl/1aG5TRwa9nWRuVdz9',
     mapName: 'Chiikawa 吉依卡哇',
   },
   {
-    id: 'tsukitei',
-    label: '預約 月亭 池袋店 (高級和牛壽喜燒) (尚未預訂)',
+    id: 'restaurant_araiya',
+    label: '預約餐廳：9/21 (一) 18:00 燒肉內臟 Araiya 澀谷 (尚未預訂)',
     checked: false,
-    comment: '池袋西口壽喜燒名店',
+    comment: '用餐時間：9/21 18:00 (晚餐)，Tabelog 極難訂位名店，需提早線上預約',
+    mapUrl: 'https://tabelog.com/tw/tokyo/A1303/A130301/13237382/',
+    mapName: 'Araiya 澀谷 Tabelog',
+  },
+  {
+    id: 'restaurant_tsukitei',
+    label: '預約餐廳：9/22 (二) 18:30 月亭 池袋店 和牛壽喜燒 (尚未預訂)',
+    checked: false,
+    comment: '用餐時間：9/22 18:30 (晚餐)，池袋西口高級和牛名店，建議提前預約',
     mapUrl: 'https://maps.app.goo.gl/3EDfwxPp6596Hs2f6',
     mapName: '月亭 池袋店',
   },
   {
-    id: 'buffet',
-    label: '預約 9/26 (六) 景觀 Buffet (淺草豪景武藏 或 新大谷 THE SKY)',
+    id: 'restaurant_gyuan',
+    label: '預約餐廳：9/23 (三) 19:00 牛庵 銀座店 神戶牛 (尚未預訂)',
     checked: false,
-    comment: '秋葉原當日高空美食饗宴',
+    comment: '用餐時間：9/23 19:00 (晚餐)，銀座 A5 神戶牛排/壽喜燒老字號名店，需提前預約',
+    mapUrl: 'https://maps.google.com/?q=Gyuan+Ginza',
+    mapName: '牛庵 銀座店 (Gyu-an)',
+  },
+  {
+    id: 'restaurant_disney',
+    label: '預約餐廳：9/26 (六) 18:00 迪士尼園區晚餐 Priority Seating (尚未預訂)',
+    checked: false,
+    comment: '用餐時間：9/26 18:00 (晚餐：藍海灣餐廳 / 水晶宮)，中午園區隨意吃快餐免預約；用餐日前 1 個月 10:00 於官方 App 開搶',
+    mapUrl: 'https://maps.google.com/?q=Tokyo+Disneyland',
+    mapName: '迪士尼官方 App 預約',
   },
   {
     id: 'airport_shuttle_927',
@@ -180,50 +214,70 @@ export const ITINERARY_DATA: DayPlan[] = [
       },
       {
         time: '17:00 - 18:30',
-        title: '17:00 閉園 · 搭乘京王線返回市區',
+        title: '17:00 閉園 · 搭乘京王線返回東京市區',
         description: '樂園於 17:00 閉園，搭乘京王線輕鬆返回東京市區（新宿/住宿周邊）。',
         type: 'transport',
       },
       {
         time: '18:30 - 21:00',
         title: '市區美味晚餐與逛街放鬆',
-        description: '在市區享用熱騰騰的日式晚餐（天婦羅、燒肉或定食），回 Airbnb 整理戰利品。',
+        description: '在市區享用熱騰騰的日式晚餐（天婦羅、燒肉或定食），回 Airbnb 整理戰利品、好好休息迎接明日潮流採購！',
         type: 'food',
       },
     ],
   },
   {
     date: '9/21 (一)',
-    title: '澀谷 ＆ 原宿 潮流巡禮 (PARCO·地瓜球快閃·燒肉·Hikarie·竹下通·Laforet·貓街)',
+    title: '新宿三麗鷗旗艦 ➔ 澀谷＆原宿潮流巡禮 (Sanrio House 10:00整理券·地瓜球·PARCO·原宿·燒肉18:00)',
     activities: [
       {
+        time: '09:45 - 10:00',
+        title: '早起出發前往新宿站南口 (LUMINE 2)',
+        description: '搭乘地鐵至「新宿站」，由南口出站直通 LUMINE 2，提早抵達現場排隊準備領取 10:00 開發的整理券。',
+        type: 'transport',
+      },
+      {
         time: '10:00 - 12:00',
-        title: '渋谷PARCO (動漫潮玩天堂)',
-        description: '前往澀谷 PARCO 6F「CYBERSPACE SHIBUYA」：集結任天堂直營旗艦店 Nintendo TOKYO、Pokemon Center Shibuya、CAPCOM STORE、JUMP SHOP 等超強動漫電玩周邊與限定扭蛋。',
+        title: '【官方最新公告：10:00~10:20 整理券發放】新宿 LUMINE 2：Sanrio House BY MASH 旗艦朝聖',
+        description: '三麗鷗與日本時尚巨頭 MASH 聯手打造的超人氣新地標（新宿 LUMINE 2 的 2F）：\n■ 最新官方整理券發放規則（2026/9月最新公告）：\n• 10:00〜10:20：工作人員於指定隊伍引導並發放整理券（每人限領 1 張，發完為止）！請提早於 09:45~10:00 抵達現場配合排隊。\n• 10:30 以後：依整理券梯次時間於 2F Sanrio House 店舖前引導進店。\n■ 必搶限定：HELLO KITCHEN 烘焙系列（像夾剛出爐麵包般用夾子挑選玩偶，附原創烘焙紙袋包裝）、gelato pique 聯名毛絨居家服套裝、Hello Kitty 蝴蝶結保溫杯、淡雅心形金屬吊飾與方形鐵盒餅乾！',
         type: 'shopping',
         locations: [
           {
-            name: '渋谷PARCO (玩具/任天堂旗艦)',
+            name: 'Sanrio House BY MASH (新宿 LUMINE 2 2F)',
+            url: 'https://maps.google.com/?q=LUMINE+Shinjuku+LUMINE+2',
+          },
+          {
+            name: '官方最新整理券公告 (MASH 官網)',
+            url: 'https://mashstylelab.jp/sanriohouse/Page/News/Shop/detail/2026/0902.aspx',
+          },
+          {
+            name: '購物攻略報導 (Dream & Hunter)',
+            url: 'https://dream.bhuntr.com/article/sanrio-house-japan',
+          },
+        ],
+      },
+      {
+        time: '12:00 - 12:20',
+        title: '搭乘山手線前往澀谷 (僅 5 分鐘車程)',
+        description: '採買完畢後從新宿南口進站，搭乘 JR 山手線（1 站約 5 分鐘）直達澀谷站八公口。',
+        type: 'transport',
+      },
+      {
+        time: '12:20 - 13:45',
+        title: '【隨到隨吃 · 免預約午餐】澀谷人氣特色美食 (極味屋漢堡排 / PARCO B1 美食街 / 一蘭)',
+        description: '午間不排預約制餐廳，行程自在彈性！可於澀谷 PARCO B1 美食街「CHAOS KITCHEN」、極味屋鐵板漢堡排、一蘭拉麵、或神南商圈周邊特色咖啡簡餐隨性挑選，無需預約、隨到隨吃無時間壓力。',
+        type: 'food',
+        locations: [
+          {
+            name: '澀谷 PARCO B1 美食街 (CHAOS KITCHEN)',
             url: 'https://maps.app.goo.gl/n79y27fN1pnhJZ458',
           },
         ],
       },
       {
-        time: '12:00 - 13:45',
-        title: '午餐推薦：燒肉內臟 Araiya 澀谷 (超人氣名店)',
-        description: '澀谷極具盛名的燒肉名店（建議提前線上預約）！厚切牛舌、極上橫膈膜與新鮮醃漬內臟炭火現烤，入口即化香氣四溢，Tabelog 評分高達 3.65+。',
-        type: 'food',
-        locations: [
-          {
-            name: '燒肉內臟 Araiya 澀谷 (Tabelog 預約)',
-            url: 'https://tabelog.com/tw/tokyo/A1303/A130301/13237382/',
-          },
-        ],
-      },
-      {
-        time: '14:00 - 15:00',
+        time: '14:00 - 14:45',
         title: '【免預約一般入場 14:00 開放】「えもじの子（地瓜球）」快閃店 @ LINE FRIENDS SQUARE SHIBUYA',
-        description: '台灣爆紅 LINE 表情貼「地瓜球（えもじの子）」期間限定快閃店！官方規定 14:00 起免預約即可現場排隊入場。剛好吃完燒肉後步行至神南區 LINE FRIENDS SQUARE 1F（近 PARCO）第一波排隊進場，搶購多款超萌地瓜球娃娃、生活小物與消費滿額特典觀測卡！',
+        description: '台灣爆紅 LINE 表情貼「地瓜球（えもじの子）」期間限定快閃店！官方規定 14:00 起免預約即可現場排隊入場。剛好吃完午餐後步行至神南區 LINE FRIENDS SQUARE 1F（近 PARCO）第一波排隊進場，搶購多款超萌地瓜球娃娃、生活小物與消費滿額特典觀測卡！',
         type: 'shopping',
         locations: [
           {
@@ -237,47 +291,27 @@ export const ITINERARY_DATA: DayPlan[] = [
         ],
       },
       {
-        time: '15:00 - 16:15',
-        title: 'MEGAドン・キホーテ 渋谷本店 (DONKI 驚安殿堂)',
-        description: '全澀谷最大 24 小時營業的 MEGA 唐吉訶德！多層樓面網羅各類美妝、藥妝、伴手禮零食、日本限定小物，現場支援免稅 Tax Free 退稅服務。',
+        time: '14:45 - 16:00',
+        title: '渋谷PARCO (動漫潮玩天堂)',
+        description: '前往澀谷 PARCO 6F「CYBERSPACE SHIBUYA」：集結任天堂直營旗艦店 Nintendo TOKYO、Pokemon Center Shibuya、CAPCOM STORE、JUMP SHOP 等超強動漫電玩周邊與限定扭蛋。',
         type: 'shopping',
         locations: [
           {
-            name: 'MEGAドン・キホーテ 渋谷本店',
-            url: 'https://maps.app.goo.gl/uaKs3HnYk8kjNiNJ7',
+            name: '渋谷PARCO (玩具/任天堂旗艦)',
+            url: 'https://maps.app.goo.gl/n79y27fN1pnhJZ458',
           },
         ],
       },
       {
-        time: '16:15 - 17:30',
-        title: '澀谷 Hikarie (渋谷ヒカリエ) ShinQs 店',
-        description: '澀谷站東口直通的地標購物中心！地下 B2/B3「ShinQs 東橫的廉街」是全東京最夢幻的甜點伴手禮殿堂（HARBS 水果千層蛋糕、Pierre Hermé、排隊和洋菓子與頂級熟食），1F-5F 精選生活美妝與日本文創選物，適合午後享用甜點小憩與採買高質感伴手禮。',
-        type: 'shopping',
-        locations: [
-          {
-            name: '澀谷 Hikarie ShinQs',
-            url: 'https://maps.google.com/?q=Shibuya+Hikarie+ShinQs',
-          },
-        ],
-      },
-      {
-        time: '17:45 - 18:45',
-        title: '原宿散策：竹下通 (Takeshita Street)',
-        description: '原宿潮流文化發祥地！品嚐必吃日式薄皮可麗餅、探訪特色古著小店、拍貼機店與可愛系飾品雜貨。',
+        time: '16:00 - 17:45',
+        title: '原宿潮流巡禮：竹下通 ＆ Laforet 原宿潮流地標百貨',
+        description: '搭乘山手線 1 站（或由神南沿貓街散步）前往原宿！品嚐必吃日式薄皮可麗餅、探訪特色古著小店、拍貼機店；走訪 Laforet 原宿探索地下次文化服飾與獨家限定扭蛋。',
         type: 'shopping',
         locations: [
           {
             name: '原宿 竹下通 (逛街)',
             url: 'https://maps.app.goo.gl/7MtpFBxiHWosz68v5',
           },
-        ],
-      },
-      {
-        time: '18:45 - 19:45',
-        title: 'Laforet 原宿 (ラフォーレ原宿 · 原宿潮流地標百貨)',
-        description: '原宿最經典的時尚潮流象徵！地下一層半（B1.5F~B0.5F）至高樓層網羅日本動漫次文化、蘿莉塔/地雷系/龐克服飾品牌、獨家限定扭蛋專賣、以及深受年輕人喜愛的前衛設計師品牌。',
-        type: 'shopping',
-        locations: [
           {
             name: 'Laforet Harajuku (原宿拉法葉百貨)',
             url: 'https://maps.app.goo.gl/ZtjmTB7xPenuphHWA',
@@ -285,14 +319,26 @@ export const ITINERARY_DATA: DayPlan[] = [
         ],
       },
       {
+        time: '18:00 - 19:45',
+        title: '【預約 18:00 晚餐盛宴】燒肉內臟 Araiya 澀谷 (超人氣名店)',
+        description: '預約晚間 18:00 黃金時段！澀谷極具盛名的燒肉名店（已加入代辦待預約 18:00）！厚切牛舌、極上橫膈膜與新鮮醃漬內臟炭火現烤，入口即化香氣四溢，Tabelog 評分高達 3.65+。',
+        type: 'food',
+        locations: [
+          {
+            name: '燒肉內臟 Araiya 澀谷 (Tabelog 預約)',
+            url: 'https://tabelog.com/tw/tokyo/A1303/A130301/13237382/',
+          },
+        ],
+      },
+      {
         time: '19:45 - 21:00',
-        title: '原宿散策：貓街 (Cat Street 裡原宿)',
-        description: '漫步連結原宿至澀谷的悠閒潮流街道，林立眾多文青買手店、特色咖啡館、設計師品牌與潮流鞋店，氣氛愜意舒適。',
+        title: '澀谷夜生活：MEGAドン・キホーテ 渋谷本店 (DONKI 驚安殿堂) ＆ 返回 Airbnb',
+        description: '吃完燒肉步行至鄰近道玄坂 MEGA 唐吉訶德！多層樓面網羅各類美妝、藥妝、伴手禮零食、日本限定小物，現場支援免稅 Tax Free 退稅服務，隨後搭車返回 Airbnb 休息。',
         type: 'shopping',
         locations: [
           {
-            name: '原宿 貓街 (Cat Street)',
-            url: 'https://maps.app.goo.gl/5AHF4HUxSipGwGiW8',
+            name: 'MEGAドン・キホーテ 渋谷本店',
+            url: 'https://maps.app.goo.gl/uaKs3HnYk8kjNiNJ7',
           },
         ],
       },
@@ -376,12 +422,12 @@ export const ITINERARY_DATA: DayPlan[] = [
   },
   {
     date: '9/23 (三)',
-    title: '直奔東京第一地標：東京晴空塔 ＆ 晴空街道 ➔ 銀座精緻漫步',
+    title: '晴空塔 ＆ 墨田水族館 ➔ 銀座【Sanrio World Ginza】➔ 頂級神戶牛【牛庵 19:00】',
     activities: [
       {
-        time: '10:00 - 15:30',
-        title: '東京晴空塔 (Tokyo Skytree) ＆ 晴空街道 Solamachi 深度探索',
-        description: '直接出發前往東京最高地標晴空塔！直通的巨型商場「東京晴空街道 Solamachi」擁有超過 300 家人氣品牌：必逛 Chiikawa Land (吉伊卡哇專賣店 晴空塔店)、Pokémon Center SKYTREE TOWN (寶可夢中心晴空塔店)、橡子共和國 (吉卜力龍貓)、Jump Shop 與日本動漫選物；中午於商場美食街品嚐人氣名店（六厘舍沾麵、利久牛舌或敘敘苑燒肉），亦可視天氣購票登上展望台俯瞰全東京天際線。',
+        time: '10:00 - 13:00',
+        title: '東京晴空塔 ＆ 晴空街道 Solamachi 潮流選物與美食午餐',
+        description: '出發前往東京第一高地標晴空塔！商場「東京晴空街道 Solamachi」匯聚超過 300 家店舖：必逛 Chiikawa Land (吉伊卡哇專賣店 晴空塔店)、Pokémon Center SKYTREE TOWN (寶可夢中心晴空塔店)、橡子共和國 (吉卜力龍貓)、Jump Shop 與日本動漫選物；中午於美食街品嚐人氣名店（六厘舍沾麵、利久牛舌或敘敘苑燒肉），亦可視天氣現場購票登上展望台俯瞰東京全景。',
         type: 'shopping',
         locations: [
           {
@@ -399,26 +445,58 @@ export const ITINERARY_DATA: DayPlan[] = [
         ],
       },
       {
-        time: '15:30 - 18:30',
-        title: '銀座 (Ginza) 高級時尚旗艦街區漫步',
-        description: '搭乘地鐵至優雅精緻的銀座商圈！探訪 GINZA SIX、伊東屋 (G.Itoya 12層文具旗艦大樓)、Uniqlo 銀座全球旗艦店，享受高級都會氛圍。',
+        time: '13:00 - 15:30',
+        title: '【夢幻海洋世界】墨田水族館 (Sumida Aquarium · 晴空街道 5F-6F)',
+        description: '位於晴空塔直通的晴空街道西館 5F~6F，日本頂級高質感室內水族館！\n• 日本最大室內開放水池：超近距離觀賞麥哲倫企鵝游泳、跳躍與超萌進食模樣。\n• 萬花筒水母大水槽 (Big Schale)：宛如漫步宇宙的夢幻水母圓盤光影展區，極致療癒。\n• 超人氣「花園鰻」沙地探頭晃動區、江戶風情金魚主題迴廊。\n• 企鵝咖啡廳：點一杯招牌藍色「企鵝漂浮冰淇淋蘇打」或水母棉花糖特調，享受愜意午後時光。',
+        type: 'activity',
+        locations: [
+          {
+            name: '墨田水族館 (Sumida Aquarium)',
+            url: 'https://maps.google.com/?q=Sumida+Aquarium',
+          },
+        ],
+      },
+      {
+        time: '16:00 - 18:45',
+        title: '【全球最大三麗鷗旗艦】Sanrio World Ginza (三麗鷗世界 銀座) ＆ 銀座漫步',
+        description: '搭乘地鐵至銀座！\n• 核心朝聖【Sanrio World Ginza (三麗鷗世界 銀座)】：全球規模最大的三麗鷗直營旗艦店（位於西銀座百貨 Nishi Ginza 1F-2F）！1 樓匯集大人感聯名精品、精緻包款飾品、美妝與東京限定伴手禮；2 樓則為全角色夢幻大殿堂，Hello Kitty、大耳狗喜拿、酷洛米、美樂蒂、帕恰狗等海量玩偶公仔、生活文具雜貨一次買齊！\n• 銀座街區漫步：逛完三麗鷗後可同步探訪伊東屋 (G.Itoya 12層文具大樓)、GINZA SIX，感受銀座奢華高雅的街區風情。',
         type: 'shopping',
         locations: [
           {
-            name: '銀座 GINZA SIX',
-            url: 'https://maps.app.goo.gl/e4f5T6u7m2b3c4x57',
+            name: '三麗鷗世界 銀座 (Sanrio World Ginza)',
+            url: 'https://maps.app.goo.gl/3b1pAsgfHhgeJzQ57',
           },
           {
             name: '銀座 伊東屋 (G.Itoya)',
             url: 'https://maps.app.goo.gl/m7u8v9x1b2c3d4e58',
           },
+          {
+            name: '銀座 GINZA SIX',
+            url: 'https://maps.app.goo.gl/e4f5T6u7m2b3c4x57',
+          },
         ],
       },
       {
-        time: '18:30 - 21:00',
-        title: '市區精緻晚餐與返回 Airbnb',
-        description: '在銀座享用精緻晚餐（如銀座篝雞白湯拉麵、炸豬排或壽司），飯後輕鬆散步搭乘地鐵返回 Airbnb 休息。',
+        time: '19:00 - 21:00',
+        title: '【預約 19:00 頂級和牛晚餐】牛庵 銀座店 (Gyu-an · A5 神戶牛壽喜燒/牛排)',
+        description: '預約 19:00 享用銀座傳奇和牛名店！深藏於銀座六丁目地下的古民家風格老店（已加入代辦待預約 19:00），以嚴選頂級 A5 神戶牛排、神戶牛壽喜燒與極品漢堡排聞名，油花均勻細緻、入口即化，Tabelog 評分高達 3.7+ 的超高人氣肉食殿堂！',
         type: 'food',
+        locations: [
+          {
+            name: '牛庵 銀座店 (Gyu-an)',
+            url: 'https://maps.google.com/?q=Gyuan+Ginza',
+          },
+          {
+            name: '牛庵 Tabelog 頁面',
+            url: 'https://tabelog.com/tokyo/A1301/A130101/13002556/',
+          },
+        ],
+      },
+      {
+        time: '21:00 - 22:00',
+        title: '銀座璀璨夜景漫步 ➔ 搭乘地鐵返回 Airbnb 休息',
+        description: '品嚐完神戶牛極致美味後，漫步感受銀座夜晚靜謐奢華的街道燈景，搭乘地鐵輕鬆返回住宿休息，為隔天清晨出發靜岡三島天空步道養精蓄銳。',
+        type: 'transport',
       },
     ],
   },
@@ -550,47 +628,71 @@ export const ITINERARY_DATA: DayPlan[] = [
   },
   {
     date: '9/26 (六)',
-    title: '秋葉原動漫聖地 ＆ 頂級高空景觀 Buffet 盛宴',
+    title: '夢幻奇蹟之日：東京迪士尼樂園 (Tokyo Disneyland) 全日暢玩攻略',
     activities: [
       {
-        time: '10:30 - 14:00',
-        title: '秋葉原電氣街 (Akihabara) 深度漫遊',
-        description: '全球御宅文化最高殿堂！探訪 Radio Kaikan (秋葉原無線電會館)、駿河屋、Mandarake 模型公仔店、扭蛋專門店與大型動漫商場 Yodobashi-Akiba。',
-        type: 'shopping',
+        time: '07:00 - 08:15',
+        title: '早起出發前往舞濱站 ➔ 抵達東京迪士尼樂園',
+        description: '早起檢查隨身物品（行動電源、門票 QR Code、野餐墊），搭乘地鐵至「新木場站」轉乘 JR 京葉線至「舞濱站 (Maihama)」，步行約 5 分鐘抵達東京迪士尼樂園正門安檢處，提早排隊等候開園。',
+        type: 'transport',
         locations: [
           {
-            name: '秋葉原電氣街 / Radio Kaikan',
-            url: 'https://maps.app.goo.gl/3wG7s5X9eK2b4YqM7',
+            name: '舞濱站 (JR 京葉線)',
+            url: 'https://maps.google.com/?q=Maihama+Station',
+          },
+          {
+            name: '東京迪士尼樂園 (Tokyo Disneyland)',
+            url: 'https://maps.google.com/?q=Tokyo+Disneyland',
           },
         ],
       },
       {
-        time: '14:00 - 17:00',
-        title: '神田萬世橋 ＆ 市區選物散策',
-        description: '漫步至紅磚建造的歷史建築 mAAch ecute 神田萬世橋，享受文創設計小店與河畔景致。',
+        time: '08:30 - 12:00',
+        title: '入園衝刺 ＆ 迪士尼 App 快速預約 ＆ 人氣設施巡禮',
+        description: '順利入園！第一時間打開 Tokyo Disney Resort App：\n1. 購買 DPA (迪士尼尊享卡)：搶購「美女與野獸：城堡奇緣」避免漫長排隊！\n2. 預約免費 40 週年優先通行證：太空山 / 巨雷山 / 幽靈公館 / 飛濺山。\n3. 抽遊行表演 / 報名體驗 (Entry Request)。\n隨後漫步世界市集、於灰姑娘城堡前留下經典紀念合照，暢玩明日世界或夢幻樂園熱門設施。',
         type: 'activity',
+        locations: [
+          {
+            name: '美女與野獸：城堡奇緣',
+            url: 'https://maps.google.com/?q=Enchanted+Tale+of+Beauty+and+the+Beast',
+          },
+        ],
       },
       {
-        time: '17:30 - 20:30',
-        title: '高空頂級景觀自助餐饗宴 (二選一預訂)',
-        description: '旅程倒數之夜的頂級高空景觀 Buffet！\n① Sky Grill Buffet 武藏 (淺草豪景飯店 26F)：正對東京晴空塔絕美夜景，富士山熔岩石炭烤牛排與現做天婦羅。\n② VIEW & DINING THE SKY (新大谷飯店)：360度極致旋轉餐廳，全景俯瞰東京繁華夜景，主廚現煎鐵板燒與極品握壽司。',
+        time: '12:00 - 13:30',
+        title: '迪士尼園區主題午餐 (建議預約 Priority Seating 或享用特色快餐)',
+        description: '於園區主題餐廳享用午餐：\n• 預約制餐廳：紅心女王宴會廳 (女王造型牛排與愛心甜點) 或 藍海灣餐廳 (俯瞰加勒比海盜航道)。\n• 必吃經典點心：煙燻火雞腿、米奇手套刈包、限定口味造型爆米花桶 (附背帶)。',
         type: 'food',
         locations: [
           {
-            name: 'Sky Grill Buffet 武藏 (淺草豪景 26F)',
-            url: 'https://maps.app.goo.gl/rM9K7x4Q2W5b6TyL9',
-          },
-          {
-            name: 'VIEW & DINING THE SKY (新大谷飯店)',
-            url: 'https://maps.app.goo.gl/aC8K4x9Q2E7v5TmP8',
+            name: '紅心女王宴會廳 (Queen of Hearts Banquet Hall)',
+            url: 'https://maps.google.com/?q=Queen+of+Hearts+Banquet+Hall',
           },
         ],
       },
       {
-        time: '21:00 - 23:00',
-        title: '回 Airbnb 整理行李與戰利品打包',
-        description: '整理幾天來的戰利品，依照免稅密封品、隨身電池與托運行李規範仔細打包，核對隔日退房時間。',
-        type: 'accommodation',
+        time: '13:30 - 17:30',
+        title: '日間旗艦大遊行「Disney Harmony in Color」＆ 人氣設施與採買',
+        description: '觀賞萬眾矚目的日間大遊行「迪士尼眾彩交融 (Harmony in Color)」：米奇、皮克斯角色、動物方城市與冰雪奇緣繽紛花車璀璨登場！午後暢玩加勒比海盜、小熊維尼獵蜜記、巨雷山，並在各特色商店選購限定玩偶、造型髮箍與伴手禮。',
+        type: 'activity',
+      },
+      {
+        time: '17:30 - 19:30',
+        title: '園內特色晚餐 ＆ 暮色城堡童話氛圍',
+        description: '點亮夜燈的灰姑娘城堡倒映在護城河上，無比浪漫！在園內享用美味晚餐（水晶宮或廣場餐廳咖哩飯），為接下來的夜間壓軸表演養精蓄銳。',
+        type: 'food',
+      },
+      {
+        time: '19:30 - 21:00',
+        title: '【壓軸夜間盛典】夢之光電子大遊行 ＆ 城堡夜間煙火秀',
+        description: '觀賞震撼人心的夜間大遊行「東京迪士尼樂園電子大遊行～夢之光 (Dreaming Up/Dreamlights)」：數百萬顆 LED 璀璨燈光流動，伴隨動人經典迪士尼旋律；隨後欣賞「迪士尼空中奇航」城堡高空璀璨煙火秀，為迪士尼一日遊畫下完美句點！',
+        type: 'activity',
+      },
+      {
+        time: '21:00 - 22:30',
+        title: '依依不捨告別迪士尼 ➔ 搭車返回 Airbnb 休息與打包行李',
+        description: '隨散場人潮步行至舞濱站，搭乘 JR 京葉線返抵東京市區，回到 Airbnb 休息。由於明天即將退房，今晚順手整理這幾天滿滿的戰利品並預先打包行李。',
+        type: 'transport',
       },
     ],
   },

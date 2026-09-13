@@ -3,7 +3,7 @@ import { CircleCheck, Circle, MapPin, ExternalLink, Pen } from 'lucide-react';
 import { TodoItem } from '../types';
 import { INITIAL_TODOS } from '../data/tripData';
 
-const STORAGE_KEY = 'tokyo-trip-todos-v10';
+const STORAGE_KEY = 'tokyo-trip-todos-v14';
 
 export const TodoList: React.FC = () => {
   const [todos, setTodos] = useState<TodoItem[]>(() => {
@@ -30,7 +30,7 @@ export const TodoList: React.FC = () => {
     return INITIAL_TODOS;
   });
 
-  const [filter, setFilter] = useState<'all' | 'pending' | 'completed'>('all');
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed'>('pending');
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));

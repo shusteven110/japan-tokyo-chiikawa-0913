@@ -63,9 +63,9 @@ export const INITIAL_TODOS: TodoItem[] = [
   },
   {
     id: 'pokemon_center',
-    label: '預約 Pokémon Center Mega Tokyo 入場 (9月預約恢復營業)',
+    label: '逛 Pokémon Center Mega Tokyo (池袋太陽城 2F · 已盛大開業營業中)',
     checked: false,
-    comment: '池袋太陽城 2F',
+    comment: '池袋太陽城 2F · 正常營業',
     mapUrl: 'https://maps.app.goo.gl/5gYBz6vRk1r4beTZ6',
     mapName: 'Pokémon Center Mega Tokyo',
   },
@@ -288,8 +288,8 @@ export const ITINERARY_DATA: DayPlan[] = [
       },
       {
         time: '13:30 - 14:45',
-        title: 'Pokémon Center Mega Tokyo (大型旗艦寶可夢中心)',
-        description: '前往太陽城 2F 的大型旗艦寶可夢中心（9月預約恢復營業），朝聖超巨大密勒頓與限定皮卡丘周邊。',
+        title: 'Pokémon Center Mega Tokyo (大型旗艦寶可夢中心 · 已開業)',
+        description: '前往太陽城 2F 的大型旗艦寶可夢中心（已盛大開業營業中！），朝聖超巨大密勒頓、限定皮卡丘玩偶與最新寶可夢系列周邊商品。',
         type: 'shopping',
         locations: [
           {

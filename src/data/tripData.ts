@@ -20,26 +20,26 @@ export const INITIAL_TODOS: TodoItem[] = [
   {
     id: 'suica',
     label: '準備交通卡：iPhone 加入 Suica / PASMO 西瓜卡並加值',
-    checked: false,
-    comment: '手機錢包可直接加卡',
+    checked: true,
+    comment: '手機錢包可直接加卡 (已確認加妥)',
   },
   {
     id: 'airbnb',
     label: '確認 Airbnb 入住指引、大門密碼鎖與房東聯絡方式',
-    checked: false,
-    comment: '預計 20:00 抵達',
+    checked: true,
+    comment: '預計 20:00 抵達 (已確認妥當)',
   },
   {
     id: 'sanrio_ticket',
-    label: '三麗鷗彩虹樂園 (Sanrio Puroland) 門票 (已買好票)',
+    label: '確認 三麗鷗彩虹樂園 (Sanrio Puroland) 門票憑證 (已買好票)',
     checked: true,
-    comment: '門票已買好，預計 9/20 開園前往',
+    comment: '門票已買好，預計 9/20 (日) 前往',
     mapUrl: 'https://maps.app.goo.gl/z9d3W3XnQy4E6m7z8',
     mapName: '三麗鷗彩虹樂園',
   },
   {
     id: 'araiya',
-    label: '預約 燒肉內臟 Araiya 澀谷 (還沒訂)',
+    label: '預約 燒肉內臟 Araiya 澀谷 (尚未預訂)',
     checked: false,
     comment: '極難訂位，盡早至 Tabelog 預約',
     mapUrl: 'https://tabelog.com/tw/tokyo/A1303/A130301/13237382/',
@@ -47,7 +47,7 @@ export const INITIAL_TODOS: TodoItem[] = [
   },
   {
     id: 'chiikawa_922',
-    label: '確認 9/22 池袋吉依卡哇門票 (已預約 15:00 入場)',
+    label: '確認 9/22 (二) 池袋吉依卡哇門票 (已預約 15:00 入場)',
     checked: true,
     comment: '門票時間 15:00',
     mapUrl: 'https://maps.app.goo.gl/1aG5TRwa9nWRuVdz9',
@@ -55,23 +55,15 @@ export const INITIAL_TODOS: TodoItem[] = [
   },
   {
     id: 'chiikawa_925',
-    label: '確認 9/25 吉依卡哇門票 (已預約 12:00 入場)',
+    label: '確認 9/25 (五) 吉依卡哇門票 (已預約 12:00 入場)',
     checked: true,
     comment: '門票時間 12:00',
     mapUrl: 'https://maps.app.goo.gl/1aG5TRwa9nWRuVdz9',
     mapName: 'Chiikawa 吉依卡哇',
   },
   {
-    id: 'pokemon_center',
-    label: '逛 Pokémon Center Mega Tokyo (池袋太陽城 2F · 已盛大開業營業中)',
-    checked: false,
-    comment: '池袋太陽城 2F · 正常營業',
-    mapUrl: 'https://maps.app.goo.gl/5gYBz6vRk1r4beTZ6',
-    mapName: 'Pokémon Center Mega Tokyo',
-  },
-  {
     id: 'tsukitei',
-    label: '預約 月亭 池袋店 (高級和牛壽喜燒) (還沒訂)',
+    label: '預約 月亭 池袋店 (高級和牛壽喜燒) (尚未預訂)',
     checked: false,
     comment: '池袋西口壽喜燒名店',
     mapUrl: 'https://maps.app.goo.gl/3EDfwxPp6596Hs2f6',
@@ -79,9 +71,15 @@ export const INITIAL_TODOS: TodoItem[] = [
   },
   {
     id: 'buffet',
-    label: '預約 9/26 景觀 Buffet (淺草豪景武藏 或 新大谷 THE SKY)',
+    label: '預約 9/26 (六) 景觀 Buffet (淺草豪景武藏 或 新大谷 THE SKY)',
     checked: false,
     comment: '秋葉原當日高空美食饗宴',
+  },
+  {
+    id: 'airport_shuttle_927',
+    label: '確認 9/27 (日) 機場專車接駁 (已預訂 11:00 發車)',
+    checked: true,
+    comment: '已訂妥 11:00 接駁車直達成田機場',
   },
   {
     id: 'esim',
@@ -99,7 +97,7 @@ export const INITIAL_TODOS: TodoItem[] = [
 
 export const ITINERARY_DATA: DayPlan[] = [
   {
-    date: '9/19 (五)',
+    date: '9/19 (六)',
     title: '台灣出發 ➔ 飛抵東京 ➔ 搭乘 Skyliner ➔ 入住 Airbnb',
     activities: [
       {
@@ -153,7 +151,7 @@ export const ITINERARY_DATA: DayPlan[] = [
     ],
   },
   {
-    date: '9/20 (六)',
+    date: '9/20 (日)',
     title: '三麗鷗彩虹樂園 Sanrio Puroland 夢幻一日遊',
     activities: [
       {
@@ -195,11 +193,11 @@ export const ITINERARY_DATA: DayPlan[] = [
     ],
   },
   {
-    date: '9/21 (日)',
-    title: '潮流核心：澀谷 ＆ 原宿 逛街吃美食',
+    date: '9/21 (一)',
+    title: '澀谷 ＆ 原宿 潮流巡禮 (PARCO·地瓜球快閃·燒肉·Hikarie·竹下通·Laforet·貓街)',
     activities: [
       {
-        time: '10:00 - 12:30',
+        time: '10:00 - 12:00',
         title: '渋谷PARCO (動漫潮玩天堂)',
         description: '前往澀谷 PARCO 6F「CYBERSPACE SHIBUYA」：集結任天堂直營旗艦店 Nintendo TOKYO、Pokemon Center Shibuya、CAPCOM STORE、JUMP SHOP 等超強動漫電玩周邊與限定扭蛋。',
         type: 'shopping',
@@ -211,9 +209,9 @@ export const ITINERARY_DATA: DayPlan[] = [
         ],
       },
       {
-        time: '12:30 - 14:00',
+        time: '12:00 - 13:45',
         title: '午餐推薦：燒肉內臟 Araiya 澀谷 (超人氣名店)',
-        description: '澀谷極具盛名的燒肉名店（還沒訂，記得提前預約）！厚切牛舌、極上橫膈膜與新鮮醃漬內臟炭火現烤，入口即化香氣四溢，Tabelog 評分高達 3.65+。',
+        description: '澀谷極具盛名的燒肉名店（建議提前線上預約）！厚切牛舌、極上橫膈膜與新鮮醃漬內臟炭火現烤，入口即化香氣四溢，Tabelog 評分高達 3.65+。',
         type: 'food',
         locations: [
           {
@@ -223,7 +221,23 @@ export const ITINERARY_DATA: DayPlan[] = [
         ],
       },
       {
-        time: '14:00 - 16:00',
+        time: '14:00 - 15:00',
+        title: '【免預約一般入場 14:00 開放】「えもじの子（地瓜球）」快閃店 @ LINE FRIENDS SQUARE SHIBUYA',
+        description: '台灣爆紅 LINE 表情貼「地瓜球（えもじの子）」期間限定快閃店！官方規定 14:00 起免預約即可現場排隊入場。剛好吃完燒肉後步行至神南區 LINE FRIENDS SQUARE 1F（近 PARCO）第一波排隊進場，搶購多款超萌地瓜球娃娃、生活小物與消費滿額特典觀測卡！',
+        type: 'shopping',
+        locations: [
+          {
+            name: 'LINE FRIENDS SQUARE SHIBUYA 1F (地瓜球快閃店)',
+            url: 'https://maps.google.com/?q=LINE+FRIENDS+SQUARE+SHIBUYA',
+          },
+          {
+            name: '緯來日本台：地瓜球快閃店資訊與預約指引',
+            url: 'https://japan.videoland.com.tw/jp_travel-article.php?id=4242',
+          },
+        ],
+      },
+      {
+        time: '15:00 - 16:15',
         title: 'MEGAドン・キホーテ 渋谷本店 (DONKI 驚安殿堂)',
         description: '全澀谷最大 24 小時營業的 MEGA 唐吉訶德！多層樓面網羅各類美妝、藥妝、伴手禮零食、日本限定小物，現場支援免稅 Tax Free 退稅服務。',
         type: 'shopping',
@@ -235,7 +249,19 @@ export const ITINERARY_DATA: DayPlan[] = [
         ],
       },
       {
-        time: '16:00 - 18:00',
+        time: '16:15 - 17:30',
+        title: '澀谷 Hikarie (渋谷ヒカリエ) ShinQs 店',
+        description: '澀谷站東口直通的地標購物中心！地下 B2/B3「ShinQs 東橫的廉街」是全東京最夢幻的甜點伴手禮殿堂（HARBS 水果千層蛋糕、Pierre Hermé、排隊和洋菓子與頂級熟食），1F-5F 精選生活美妝與日本文創選物，適合午後享用甜點小憩與採買高質感伴手禮。',
+        type: 'shopping',
+        locations: [
+          {
+            name: '澀谷 Hikarie ShinQs',
+            url: 'https://maps.google.com/?q=Shibuya+Hikarie+ShinQs',
+          },
+        ],
+      },
+      {
+        time: '17:45 - 18:45',
         title: '原宿散策：竹下通 (Takeshita Street)',
         description: '原宿潮流文化發祥地！品嚐必吃日式薄皮可麗餅、探訪特色古著小店、拍貼機店與可愛系飾品雜貨。',
         type: 'shopping',
@@ -247,7 +273,19 @@ export const ITINERARY_DATA: DayPlan[] = [
         ],
       },
       {
-        time: '18:00 - 20:30',
+        time: '18:45 - 19:45',
+        title: 'Laforet 原宿 (ラフォーレ原宿 · 原宿潮流地標百貨)',
+        description: '原宿最經典的時尚潮流象徵！地下一層半（B1.5F~B0.5F）至高樓層網羅日本動漫次文化、蘿莉塔/地雷系/龐克服飾品牌、獨家限定扭蛋專賣、以及深受年輕人喜愛的前衛設計師品牌。',
+        type: 'shopping',
+        locations: [
+          {
+            name: 'Laforet Harajuku (原宿拉法葉百貨)',
+            url: 'https://maps.app.goo.gl/ZtjmTB7xPenuphHWA',
+          },
+        ],
+      },
+      {
+        time: '19:45 - 21:00',
         title: '原宿散策：貓街 (Cat Street 裡原宿)',
         description: '漫步連結原宿至澀谷的悠閒潮流街道，林立眾多文青買手店、特色咖啡館、設計師品牌與潮流鞋店，氣氛愜意舒適。',
         type: 'shopping',
@@ -261,7 +299,7 @@ export const ITINERARY_DATA: DayPlan[] = [
     ],
   },
   {
-    date: '9/22 (一)',
+    date: '9/22 (二)',
     title: '自然醒 ➔ 池袋大巡禮 (吉伊卡哇 15:00·太陽城·動漫·壽喜燒)',
     activities: [
       {
@@ -311,9 +349,9 @@ export const ITINERARY_DATA: DayPlan[] = [
         ],
       },
       {
-        time: '17:00 - 18:00',
+        time: '17:00 - 18:30',
         title: 'animate 池袋總店 (動漫旗艦殿堂)',
-        description: '全球最大規模動漫旗艦店！9 層樓超豐富商品，從最新人氣動漫、輕小說、同人誌、模型到聲優 CD 一應俱全。',
+        description: '全球最大規模動漫旗艦店！9 層樓超豐富商品，從最新人氣動漫、輕小說、同人誌、模型到聲優 CD 一應俱全，採買完畢後漫步前往池袋西口。',
         type: 'shopping',
         locations: [
           {
@@ -323,21 +361,9 @@ export const ITINERARY_DATA: DayPlan[] = [
         ],
       },
       {
-        time: '18:00 - 19:00',
-        title: 'Chanoma 咖啡廳下午茶放鬆',
-        description: '環境極佳的日式質感咖啡廳，特有榻榻米鋪席座位，逛街累了點杯抹茶拿鐵與精緻日式甜品歇腳放鬆。',
-        type: 'food',
-        locations: [
-          {
-            name: 'Chanoma 池袋店',
-            url: 'https://maps.app.goo.gl/JUFawym6rjAAov7x8',
-          },
-        ],
-      },
-      {
-        time: '19:00 - 21:00',
-        title: '晚餐盛宴：月亭 池袋店 (高級壽喜燒)',
-        description: '池袋知名高級壽喜燒・涮涮鍋料亭（還沒訂，建議提前預約）！精選 A5 和牛沾覆金黃生蛋液，濃郁鹹甜滋味令人難忘，在日式包廂中享受優雅時光。',
+        time: '18:30 - 20:30',
+        title: '晚餐盛宴：月亭 池袋店 (高級和牛壽喜燒)',
+        description: '池袋西口知名高級壽喜燒・涮涮鍋料亭（建議提前預約）！精選 A5 和牛沾覆金黃生蛋液，濃郁鹹甜滋味令人難忘，在日式包廂中享受優雅時光。',
         type: 'food',
         locations: [
           {
@@ -349,25 +375,13 @@ export const ITINERARY_DATA: DayPlan[] = [
     ],
   },
   {
-    date: '9/23 (二)',
-    title: '下町風情 ＆ 東京晴空塔：淺草雷門 ➔ 晴空街道 ➔ 銀座漫步',
+    date: '9/23 (三)',
+    title: '直奔東京第一地標：東京晴空塔 ＆ 晴空街道 ➔ 銀座精緻漫步',
     activities: [
       {
-        time: '09:30 - 12:00',
-        title: '淺草寺 (Senso-ji) · 雷門與仲見世通商店街',
-        description: '走訪東京最古老寺廟淺草寺！在巨大的「雷門」紅燈籠前合影，漫步於江戶風情洋溢的仲見世通商店街，品嚐現烤仙貝、人形燒、抹茶冰淇淋，並至本堂參拜祈福求籤。',
-        type: 'activity',
-        locations: [
-          {
-            name: '淺草寺 (雷門)',
-            url: 'https://maps.app.goo.gl/wJ1q5K7o5E4y3N8T9',
-          },
-        ],
-      },
-      {
-        time: '12:00 - 15:30',
-        title: '東京晴空塔 (Tokyo Skytree) ＆ 晴空街道 Solamachi 購物美食',
-        description: '前往東京最高地標晴空塔！商場「東京晴空街道」匯聚超過 300 家店舖，包含 Chiikawa Land (吉伊卡哇專賣店 晴空塔店)、寶可夢中心晴空塔店、日系潮流雜貨及伴手禮專區；中午在此品嚐豐富午餐美食。',
+        time: '10:00 - 15:30',
+        title: '東京晴空塔 (Tokyo Skytree) ＆ 晴空街道 Solamachi 深度探索',
+        description: '直接出發前往東京最高地標晴空塔！直通的巨型商場「東京晴空街道 Solamachi」擁有超過 300 家人氣品牌：必逛 Chiikawa Land (吉伊卡哇專賣店 晴空塔店)、Pokémon Center SKYTREE TOWN (寶可夢中心晴空塔店)、橡子共和國 (吉卜力龍貓)、Jump Shop 與日本動漫選物；中午於商場美食街品嚐人氣名店（六厘舍沾麵、利久牛舌或敘敘苑燒肉），亦可視天氣購票登上展望台俯瞰全東京天際線。',
         type: 'shopping',
         locations: [
           {
@@ -377,6 +391,10 @@ export const ITINERARY_DATA: DayPlan[] = [
           {
             name: '東京晴空街道 (Tokyo Solamachi)',
             url: 'https://maps.app.goo.gl/4N3r6x7b1G2m5T8p9',
+          },
+          {
+            name: 'Chiikawa Land 晴空塔店',
+            url: 'https://maps.google.com/?q=Chiikawa+Land+Tokyo+Solamachi',
           },
         ],
       },
@@ -405,55 +423,81 @@ export const ITINERARY_DATA: DayPlan[] = [
     ],
   },
   {
-    date: '9/24 (三)',
-    title: '繁華新宿巡禮 ＆ 碳烤名物 新宿鰻鐵 Hanare',
+    date: '9/24 (四)',
+    title: '靜岡富士山絕景：三島天空步道 ＆ 大耳狗喜拿期間限定聯名一日遊',
     activities: [
       {
-        time: '10:30 - 12:30',
-        title: '新宿繁華市區漫步',
-        description: '探索新宿熱鬧商圈：伊勢丹百貨 (Isetan)、LUMINE 流行服飾、歌舞伎町哥吉拉大道拍照打卡，感受東京都會節奏。',
-        type: 'activity',
+        time: '08:30 - 10:15',
+        title: '搭乘新幹線＋接駁巴士直達三島天空步道',
+        description: '從東京/品川站搭乘 JR 東海道新幹線（約 45 分鐘）快速抵達「JR 三島站」，於三島站南口 5 號站牌轉乘東海巴士（約 25 分鐘），舒適直達「三島天空步道」。沿途即可遠眺壯麗的富士山！',
+        type: 'transport',
         locations: [
           {
-            name: '新宿歌舞伎町 (哥吉拉大道)',
-            url: 'https://maps.app.goo.gl/QpM4dGz9eF4Z3Uv88',
+            name: '三島站 (JR 東海道新幹線)',
+            url: 'https://maps.google.com/?q=Mishima+Station',
+          },
+          {
+            name: '三島天空步道 (Mishima Skywalk)',
+            url: 'https://maps.google.com/?q=Mishima+Skywalk',
           },
         ],
       },
       {
-        time: '12:30 - 14:30',
-        title: '炭火鰻魚名店：新宿鰻鐵 Hanare (うな鐵)',
-        description: '新宿享負盛名的炭火現烤鰻魚專賣名店！必點特選鰻魚飯三吃（單吃、加芥末海苔、最後淋上高湯作茶泡飯），香嫩蒲燒醬汁搭配炭火焦香，令人讚不絕口。',
+        time: '10:15 - 12:45',
+        title: '【期間限定聯名】三島天空步道 x 大耳狗喜拿 (Cinnamoroll) 富士山景漫步',
+        description: '走上全長 400 公尺的日本第一長行人專用吊橋，飽覽壯麗的富士山與駿河灣全景！期間限定（9/12～11/4 第一彈）三麗鷗人氣巨星「大耳狗喜拿」聯名活動：\n• 專屬門票：活動期間吊橋門票採用限定大耳狗專屬設計。\n• 拍照打卡點：Tree Tree Tree 雙層拍照看板，以及ふろっく-福時計-、Mission Bay 等各處大耳狗限定立牌。\n• 紀念贈品：參與活動或點購特定餐點即可獲得活動版大耳狗貼紙！',
+        type: 'activity',
+        locations: [
+          {
+            name: '三島天空步道 (Mishima Skywalk)',
+            url: 'https://maps.google.com/?q=Mishima+Skywalk',
+          },
+          {
+            name: '活動專文介紹 (Have a Good Holiday)',
+            url: 'https://www.haveagood-holiday.com/zh-TW/articles/mishima-skywalk-cinnamoroll-collaboration',
+          },
+        ],
+      },
+      {
+        time: '12:45 - 14:15',
+        title: '大耳狗聯名甜點飲品 ＆ 靜岡在地美食午餐',
+        description: '在 Skywalk 美食區享用限定聯名餐點與在地美味：\n• 大耳狗天空軟冰淇淋聖代：三島天空步道招牌「天空霜淇淋」搭配葡萄柚蘇打與大耳狗造型裝飾。\n• 大耳狗好朋友天空蘇打：標誌性藍色荔枝蘇打，隨機贈送 6 款原創大耳狗吊飾之一。\n• 必吃在地特產：榮獲全日本金賞的「三島馬鈴薯可樂餅（みしまコロッケ）」與箱根麓豬排料理。',
         type: 'food',
         locations: [
           {
-            name: '新宿鰻鐵 Hanare (新宿うな鐵 はなれ)',
-            url: 'https://maps.app.goo.gl/Hq4F6tF5gJ7c6a6W8',
+            name: 'Skywalk Soft Cream (霜淇淋與聯名甜點)',
+            url: 'https://maps.google.com/?q=Mishima+Skywalk',
           },
         ],
       },
       {
-        time: '14:30 - 18:00',
-        title: '新宿深度購物採買',
-        description: 'Bic Camera / Yodobashi 電器旗艦館免稅採買、世界堂文具、藥妝店採購日本生活好物。',
+        time: '14:15 - 15:45',
+        title: '搶購大耳狗原創限定周邊 ＆ Sky Garden 花卉溫室天井',
+        description: '前往 1 樓禮品店與 Sky Garden 紀念品區選購三島天空步道限定大耳狗周邊：\n• 托特包：印有戴著富士山造型帽的專屬大耳狗圖樣。\n• 絨毛鑰匙圈：大耳狗原創出遊設計玩偶吊飾。\n• 限定資料夾與 15cm 對景透明尺。\n選購後在鋪滿鮮花天花板的夢幻玻璃溫室「Sky Garden」漫步，享受浪漫森林微風與景觀。',
         type: 'shopping',
-      },
-      {
-        time: '18:30 - 21:00',
-        title: '新宿夜景展望或居酒屋散策',
-        description: '可至東京都廳 45 樓免費展望台俯瞰璀璨東京都心百萬夜景，隨後於思出橫丁或道地居酒屋享用串燒啤酒。',
-        type: 'activity',
         locations: [
           {
-            name: '東京都廳 展望室',
-            url: 'https://maps.app.goo.gl/c8iKk4U9dM5G9rXk6',
+            name: 'Sky Garden 紀念品區 & 花卉溫室',
+            url: 'https://maps.google.com/?q=Mishima+Skywalk+Sky+Garden',
           },
         ],
+      },
+      {
+        time: '15:45 - 17:30',
+        title: '搭乘巴士返回三島站 ➔ 搭乘新幹線返抵東京市區',
+        description: '從三島天空步道搭乘東海巴士（約 25 分鐘）返回 JR 三島站，可在車站商場選購靜岡銘菓鰻魚派、靜岡深蒸煎茶伴手禮。搭乘東海道新幹線快速返抵東京。',
+        type: 'transport',
+      },
+      {
+        time: '18:00 - 20:30',
+        title: '東京市區美味晚餐 ＆ 輕鬆返回 Airbnb 整理戰利品',
+        description: '返抵東京後享用美味晚餐（可選炭烤鰻魚飯、拉麵或居酒屋料理），早點返回 Airbnb 休息並開箱今天滿滿的大耳狗限定周邊！',
+        type: 'food',
       },
     ],
   },
   {
-    date: '9/25 (四)',
+    date: '9/25 (五)',
     title: '吉依卡哇 12:00 門票入場 ➔ 吉祥寺綠意漫步 ＆ 井之頭公園',
     activities: [
       {
@@ -505,7 +549,7 @@ export const ITINERARY_DATA: DayPlan[] = [
     ],
   },
   {
-    date: '9/26 (五)',
+    date: '9/26 (六)',
     title: '秋葉原動漫聖地 ＆ 頂級高空景觀 Buffet 盛宴',
     activities: [
       {
@@ -551,19 +595,19 @@ export const ITINERARY_DATA: DayPlan[] = [
     ],
   },
   {
-    date: '9/27 (六)',
-    title: '退房前往機場 ➔ 免稅採購 ➔ 平安返抵溫暖的家',
+    date: '9/27 (日)',
+    title: '退房搭乘 11:00 接駁車 ➔ 直達成田機場 ➔ 免稅採購 ➔ 平安返台',
     activities: [
       {
-        time: '09:30 - 11:00',
-        title: '退房與最後巡禮',
-        description: '確認 Airbnb 房間收拾完畢，檢查護照、手機、錢包、貴重物品隨身攜帶，辦理鑰匙歸還與退房手續。',
+        time: '09:30 - 10:50',
+        title: '退房準備與最後整理',
+        description: '確認 Airbnb 房間收拾完畢，檢查護照、手機、錢包、貴重物品隨身攜帶，辦理鑰匙歸還與退房手續，前往約定上車點候車。',
         type: 'accommodation',
       },
       {
-        time: '11:00 - 13:00',
-        title: '搭乘電車前往機場',
-        description: '搭乘 Skyliner / 成田特快 N\'EX 輕鬆前往機場航廈。',
+        time: '11:00 - 12:30',
+        title: '【已預訂專車】11:00 機場接駁車出發直達機場',
+        description: '準時搭乘已預約好的 11:00 機場專車接駁！免提沉重大行李爬地鐵轉車，舒適直達機場航廈，預計約 12:30 抵達成田機場。',
         type: 'transport',
       },
       {

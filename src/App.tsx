@@ -66,7 +66,7 @@ export default function App() {
             <div>
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-orange-50 dark:bg-orange-950/50 text-orange-600 dark:text-orange-400 text-[11px] sm:text-xs font-semibold mb-1 sm:mb-1.5 border border-orange-100 dark:border-orange-900/40">
                 <Compass className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                <span>9 Days in Tokyo · 9/19 (五) ~ 9/27 (六)</span>
+                <span>9 Days in Tokyo · 9/19 (六) ~ 9/27 (日)</span>
               </div>
               <h1 className="text-xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
                 Tokyo Adventure

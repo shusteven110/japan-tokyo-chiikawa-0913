@@ -122,18 +122,17 @@ export default function App() {
 
           {/* Quick Day Sub-bar (Only in Itinerary view) */}
           {activeTab === 'itinerary' && (
-            <div className="flex items-center justify-between gap-2 sm:gap-3 pt-2 mt-2 sm:pt-3 sm:mt-3 border-t border-slate-100 dark:border-slate-800">
-              <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none w-full sm:w-auto">
-                <div className="flex items-center gap-1 text-[11px] sm:text-xs font-bold text-slate-500 dark:text-slate-400 whitespace-nowrap mr-0.5 sm:mr-1 flex-shrink-0">
+            <div className="pt-2 mt-2 sm:pt-2.5 sm:mt-2.5 border-t border-slate-100 dark:border-slate-800">
+              <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1.5 scrollbar-none w-full">
+                <div className="flex items-center gap-1 text-[11px] sm:text-xs font-bold text-slate-500 dark:text-slate-400 whitespace-nowrap mr-0.5 flex-shrink-0">
                   <CalendarDays className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-orange-500 dark:text-orange-400" />
-                  <span className="hidden sm:inline">行程直達:</span>
-                  <span className="sm:hidden">直達:</span>
+                  <span>行程直達:</span>
                 </div>
 
-                {/* Mobile scroll-to-todo button */}
+                {/* Quick scroll to Todo button */}
                 <button
                   onClick={scrollToTodo}
-                  className="flex sm:hidden items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap flex-shrink-0 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 active:bg-emerald-100"
+                  className="flex items-center gap-1 px-2.5 py-1 sm:py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap flex-shrink-0 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 active:scale-95"
                 >
                   <ListTodo className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                   <span>待辦清單</span>
@@ -143,7 +142,7 @@ export default function App() {
                   <button
                     key={idx}
                     onClick={() => scrollToDay(idx + 1)}
-                    className={`flex items-center gap-1.5 sm:gap-2 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap flex-shrink-0 ${
+                    className={`flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap flex-shrink-0 ${
                       activeDay === idx + 1
                         ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-sm ring-2 ring-orange-200 dark:ring-orange-900/60'
                         : 'bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-orange-50 dark:hover:bg-slate-750 hover:text-orange-600 dark:hover:text-orange-400 border border-slate-200 dark:border-slate-700 hover:border-orange-200 dark:hover:border-slate-600'
@@ -163,13 +162,6 @@ export default function App() {
                     </span>
                   </button>
                 ))}
-              </div>
-
-              <div className="text-xs text-slate-400 dark:text-slate-500 font-medium hidden lg:flex items-center gap-2 flex-shrink-0">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span>
-                  三麗鷗彩虹樂園 · 澀谷原宿 · 池袋吉伊卡哇 · 淺草晴空塔 · 吉祥寺 · 秋葉原
-                </span>
               </div>
             </div>
           )}

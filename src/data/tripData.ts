@@ -39,25 +39,25 @@ export const INITIAL_TODOS: TodoItem[] = [
   },
   {
     id: 'ticket_skytree',
-    label: '購買 9/23 (三) 東京晴空塔展望台 ＆ 墨田水族館 門票 (還沒買)',
-    checked: false,
-    comment: '還沒買，建議提前於 Klook / KKday 預訂 350m展望台＋水族館聯票',
+    label: '確認 9/23 (三) 東京晴空塔展望台 ＆ 墨田水族館 門票 (已買好票)',
+    checked: true,
+    comment: '已買妥！憑憑證 QR Code 登頂 350m 展望台 ＆ 參觀墨田水族館',
     mapUrl: 'https://maps.google.com/?q=Tokyo+Skytree',
     mapName: '東京晴空塔',
   },
   {
     id: 'ticket_skywalk',
-    label: '購買 9/24 (四) 三島天空步道 (Mishima Skywalk) 門票 (還沒買)',
-    checked: false,
-    comment: '還沒買，可至官網或現場購買，活動期間為大耳狗限定版票面',
+    label: '確認 9/24 (四) 三島天空步道 (Mishima Skywalk) 門票 (已買好票)',
+    checked: true,
+    comment: '已買妥！大耳狗喜拿期間限定聯名票面',
     mapUrl: 'https://maps.google.com/?q=Mishima+Skywalk',
     mapName: '三島天空步道',
   },
   {
     id: 'ticket_disney',
-    label: '購買 9/26 (六) 東京迪士尼樂園門票 一日護照 (還沒買)',
-    checked: false,
-    comment: '還沒買，週六熱門場次務必提前至官網/Klook預訂並綁定官方 App',
+    label: '確認 9/26 (六) 東京迪士尼樂園門票 一日護照 (已買好票)',
+    checked: true,
+    comment: '已買妥！請確認已將門票 QR Code 綁定入 Tokyo Disney Resort 官方 App',
     mapUrl: 'https://maps.google.com/?q=Tokyo+Disneyland',
     mapName: '東京迪士尼樂園',
   },
@@ -86,28 +86,12 @@ export const INITIAL_TODOS: TodoItem[] = [
     mapName: 'Araiya 澀谷 Tabelog',
   },
   {
-    id: 'restaurant_tsukitei',
-    label: '預約餐廳：9/22 (二) 18:30 月亭 池袋店 和牛壽喜燒 (尚未預訂)',
-    checked: false,
-    comment: '用餐時間：9/22 18:30 (晚餐)，池袋西口高級和牛名店，建議提前預約',
-    mapUrl: 'https://maps.app.goo.gl/3EDfwxPp6596Hs2f6',
-    mapName: '月亭 池袋店',
-  },
-  {
     id: 'restaurant_gyuan',
     label: '預約餐廳：9/23 (三) 19:00 牛庵 銀座店 神戶牛 (尚未預訂)',
     checked: false,
     comment: '用餐時間：9/23 19:00 (晚餐)，銀座 A5 神戶牛排/壽喜燒老字號名店，需提前預約',
     mapUrl: 'https://maps.google.com/?q=Gyuan+Ginza',
     mapName: '牛庵 銀座店 (Gyu-an)',
-  },
-  {
-    id: 'restaurant_disney',
-    label: '預約餐廳：9/26 (六) 18:00 迪士尼園區晚餐 Priority Seating (尚未預訂)',
-    checked: false,
-    comment: '用餐時間：9/26 18:00 (晚餐：藍海灣餐廳 / 水晶宮)，中午園區隨意吃快餐免預約；用餐日前 1 個月 10:00 於官方 App 開搶',
-    mapUrl: 'https://maps.google.com/?q=Tokyo+Disneyland',
-    mapName: '迪士尼官方 App 預約',
   },
   {
     id: 'airport_shuttle_927',
@@ -346,7 +330,7 @@ export const ITINERARY_DATA: DayPlan[] = [
   },
   {
     date: '9/22 (二)',
-    title: '自然醒 ➔ 池袋大巡禮 (吉伊卡哇 15:00·太陽城·動漫·壽喜燒)',
+    title: '自然醒 ➔ 池袋大巡禮 (吉伊卡哇 15:00·太陽城·animate旗艦·隨性美食)',
     activities: [
       {
         time: '10:30 - 11:15',
@@ -408,13 +392,17 @@ export const ITINERARY_DATA: DayPlan[] = [
       },
       {
         time: '18:30 - 20:30',
-        title: '晚餐盛宴：月亭 池袋店 (高級和牛壽喜燒)',
-        description: '池袋西口知名高級壽喜燒・涮涮鍋料亭（建議提前預約）！精選 A5 和牛沾覆金黃生蛋液，濃郁鹹甜滋味令人難忘，在日式包廂中享受優雅時光。',
+        title: '【隨到隨吃 · 免預約晚餐】池袋人氣美食隨選 (無敵家拉麵 / 炸牛元村 / 太陽城美食)',
+        description: '晚餐隨興自在享用，不排特定預約餐廳！池袋為東京著名平價美食聚集地：\n• 麵創房 無敵家：排隊名店炙烤厚叉燒豚骨拉麵。\n• 炸牛元村 (牛かつ もと村)：石板現烤酥脆和牛牛排。\n• 太陽城 / 東武西武百貨美食街：利久炭烤牛舌、排隊迴轉壽司或居酒屋，隨心挑選無時間拘束，飯後返回 Airbnb 休息。',
         type: 'food',
         locations: [
           {
-            name: '月亭 池袋店 (壽喜燒)',
-            url: 'https://maps.app.goo.gl/3EDfwxPp6596Hs2f6',
+            name: '麵創房 無敵家 (池袋東口)',
+            url: 'https://maps.google.com/?q=Mutekiya+Ikebukuro',
+          },
+          {
+            name: '炸牛元村 池袋店 (牛かつ もと村)',
+            url: 'https://maps.google.com/?q=Gyukatsu+Motomura+Ikebukuro',
           },
         ],
       },
@@ -660,8 +648,8 @@ export const ITINERARY_DATA: DayPlan[] = [
       },
       {
         time: '12:00 - 13:30',
-        title: '迪士尼園區主題午餐 (建議預約 Priority Seating 或享用特色快餐)',
-        description: '於園區主題餐廳享用午餐：\n• 預約制餐廳：紅心女王宴會廳 (女王造型牛排與愛心甜點) 或 藍海灣餐廳 (俯瞰加勒比海盜航道)。\n• 必吃經典點心：煙燻火雞腿、米奇手套刈包、限定口味造型爆米花桶 (附背帶)。',
+        title: '【隨到隨吃 · 免預約】迪士尼主題快餐 ＆ 經典特色小吃',
+        description: '整天輕鬆隨意吃，免去預約餐廳的時間限制！\n• 必吃經典點心：巨無霸煙燻火雞腿、米奇造型手套刈包、綠色三眼怪麻糬、造型爆米花桶。\n• 免預約快餐廳：紅心女王宴會廳、明日樂園舞台餐廳（米奇漢堡）、頑熊餐廳（香濃咖哩飯），直接排隊取餐入座。',
         type: 'food',
         locations: [
           {
@@ -678,8 +666,8 @@ export const ITINERARY_DATA: DayPlan[] = [
       },
       {
         time: '17:30 - 19:30',
-        title: '園內特色晚餐 ＆ 暮色城堡童話氛圍',
-        description: '點亮夜燈的灰姑娘城堡倒映在護城河上，無比浪漫！在園內享用美味晚餐（水晶宮或廣場餐廳咖哩飯），為接下來的夜間壓軸表演養精蓄銳。',
+        title: '【隨意享用】園內美味晚餐 ＆ 暮色城堡童話氛圍',
+        description: '點亮夜燈的灰姑娘城堡倒映在護城河上，無比浪漫！在園內快速餐廳隨興享用晚餐（如廣場餐廳、小木偶披薩等，免預約直接點餐入座），吃飽後為接下來的夜間壓軸表演養精蓄銳。',
         type: 'food',
       },
       {

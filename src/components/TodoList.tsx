@@ -3,7 +3,7 @@ import { CircleCheck, Circle, MapPin, ExternalLink, Pen } from 'lucide-react';
 import { TodoItem } from '../types';
 import { INITIAL_TODOS } from '../data/tripData';
 
-const STORAGE_KEY = 'tokyo-trip-todos-v14';
+const STORAGE_KEY = 'tokyo-trip-todos-v16';
 
 export const TodoList: React.FC = () => {
   const [todos, setTodos] = useState<TodoItem[]>(() => {

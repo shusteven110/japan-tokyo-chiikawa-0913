@@ -3,7 +3,7 @@ import { CircleCheck, Circle, MapPin, ExternalLink, Pen } from 'lucide-react';
 import { TodoItem } from '../types';
 import { INITIAL_TODOS } from '../data/tripData';
 
-const STORAGE_KEY = 'tokyo-trip-todos-v16';
+const STORAGE_KEY = 'tokyo-trip-todos-v18';
 
 export const TodoList: React.FC = () => {
   const [todos, setTodos] = useState<TodoItem[]>(() => {
@@ -120,8 +120,27 @@ export const TodoList: React.FC = () => {
 
       {/* Todo List Items */}
       <div className="flex-1 overflow-y-auto space-y-2 sm:space-y-2.5 pr-1 -mr-1 sm:pr-1.5 sm:-mr-1.5 focus:outline-none custom-scrollbar">
-        {filteredTodos.map((item) => (
-          <div
+        {filteredTodos.length === 0 ? (
+          <div className="py-8 sm:py-10 flex flex-col items-center justify-center text-center px-3">
+            <div className="w-12 h-12 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2.5 shadow-2xs border border-emerald-100 dark:border-emerald-900/50">
+              <CircleCheck className="w-6 h-6" />
+            </div>
+            <h3 className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-100 mb-1">
+              🎉 太棒了！待辦事項已全部完成
+            </h3>
+            <p className="text-xs text-slate-500 dark:text-slate-400 max-w-xs mb-3 leading-relaxed">
+              機票、住宿、熱門票券、預約餐廳、eSIM 與日幣現金皆已 100% 準備就緒，可以安心出發囉！
+            </p>
+            <button
+              onClick={() => setFilter('all')}
+              className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-750 transition-colors"
+            >
+              檢視所有完成項目 ({todos.length})
+            </button>
+          </div>
+        ) : (
+          filteredTodos.map((item) => (
+            <div
             key={item.id}
             className={`group rounded-lg sm:rounded-xl border p-2 sm:p-2.5 transition-all duration-200 hover:shadow-xs ${
               item.checked
@@ -193,7 +212,8 @@ export const TodoList: React.FC = () => {
               </div>
             </div>
           </div>
-        ))}
+          ))
+        )}
       </div>
     </div>
   );

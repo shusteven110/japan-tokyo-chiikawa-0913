@@ -19,6 +19,7 @@ export const TravelTips: React.FC = () => {
 
   const categories = [
     { id: 'all', label: '全部須知' },
+    { id: 'dinner_guide', label: '🍽️ 9天每日晚餐推薦' },
     { id: 'entry', label: '入境與法規' },
     { id: 'money', label: '交通與支付' },
     { id: 'dining', label: '飲食與禮儀' },
@@ -152,7 +153,7 @@ export const TravelTips: React.FC = () => {
                     )}
                     <span>{item.subtitle}</span>
                   </h4>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed whitespace-pre-line">
                     {item.content}
                   </p>
                 </div>

@@ -79,19 +79,19 @@ export const INITIAL_TODOS: TodoItem[] = [
   },
   {
     id: 'restaurant_araiya',
-    label: '預約餐廳：9/21 (一) 18:00 燒肉內臟 Araiya 澀谷 (尚未預訂)',
-    checked: false,
-    comment: '用餐時間：9/21 18:00 (晚餐)，Tabelog 極難訂位名店，需提早線上預約',
-    mapUrl: 'https://tabelog.com/tw/tokyo/A1303/A130301/13237382/',
-    mapName: 'Araiya 澀谷 Tabelog',
+    label: '確認 9/21 (一) 20:00 燒肉內臟 Araiya 澀谷 (已確定預約 2 位)',
+    checked: true,
+    comment: '已預約 9/21 20:00 (2位)，極難訂位 Tabelog 3.65+ 燒肉名店',
+    mapUrl: 'https://maps.google.com/?q=Yakiniku+Hormone+Arai-ya+Shibuya',
+    mapName: '燒肉內臟 Araiya 澀谷',
   },
   {
-    id: 'restaurant_gyuan',
-    label: '預約餐廳：9/23 (三) 19:00 牛庵 銀座店 神戶牛 (尚未預訂)',
-    checked: false,
-    comment: '用餐時間：9/23 19:00 (晚餐)，銀座 A5 神戶牛排/壽喜燒老字號名店，需提前預約',
-    mapUrl: 'https://maps.google.com/?q=Gyuan+Ginza',
-    mapName: '牛庵 銀座店 (Gyu-an)',
+    id: 'restaurant_imahan',
+    label: '確認 9/22 (二) 19:30 人形町今半 池袋東武店 和牛壽喜燒 (已確定預約 2 位)',
+    checked: true,
+    comment: '已預約 9/22 19:30 (2位)，百年壽喜燒天花板名店 (池袋東武百貨 15F 餐廳街)',
+    mapUrl: 'https://maps.google.com/?q=Ningyocho+Imahan+Ikebukuro+Tobu',
+    mapName: '人形町今半 池袋東武店',
   },
   {
     id: 'airport_shuttle_927',
@@ -101,15 +101,15 @@ export const INITIAL_TODOS: TodoItem[] = [
   },
   {
     id: 'esim',
-    label: '購買 日本上網 eSIM / 漫遊網卡並確認啟用流程',
-    checked: false,
-    comment: '抵達日本後開啟漫遊即用',
+    label: '確認 日本上網 eSIM / 漫遊網卡 (已買好)',
+    checked: true,
+    comment: '已買妥！請保存好啟用 QR Code，抵達日本後開啟漫遊即用',
   },
   {
     id: 'cash_currency',
-    label: '準備日幣現金 (每人隨身約 1.5萬~2萬日圓，少數拉麵店與點餐機僅收現金)',
-    checked: false,
-    comment: '換好小面額鈔票',
+    label: '準備日幣現金 (每人隨身約 1.5萬~2萬日圓，已準備就緒)',
+    checked: true,
+    comment: '已準備妥當！小面額鈔票與零錢備妥，用於扭蛋、神社祈願與部分拉麵投幣機',
   },
 ];
 
@@ -287,7 +287,7 @@ export const ITINERARY_DATA: DayPlan[] = [
         ],
       },
       {
-        time: '16:00 - 17:45',
+        time: '16:00 - 18:00',
         title: '原宿潮流巡禮：竹下通 ＆ Laforet 原宿潮流地標百貨',
         description: '搭乘山手線 1 站（或由神南沿貓街散步）前往原宿！品嚐必吃日式薄皮可麗餅、探訪特色古著小店、拍貼機店；走訪 Laforet 原宿探索地下次文化服飾與獨家限定扭蛋。',
         type: 'shopping',
@@ -304,33 +304,47 @@ export const ITINERARY_DATA: DayPlan[] = [
       },
       {
         time: '18:00 - 19:45',
-        title: '【預約 18:00 晚餐盛宴】燒肉內臟 Araiya 澀谷 (超人氣名店)',
-        description: '預約晚間 18:00 黃金時段！澀谷極具盛名的燒肉名店（已加入代辦待預約 18:00）！厚切牛舌、極上橫膈膜與新鮮醃漬內臟炭火現烤，入口即化香氣四溢，Tabelog 評分高達 3.65+。',
-        type: 'food',
-        locations: [
-          {
-            name: '燒肉內臟 Araiya 澀谷 (Tabelog 預約)',
-            url: 'https://tabelog.com/tw/tokyo/A1303/A130301/13237382/',
-          },
-        ],
-      },
-      {
-        time: '19:45 - 21:00',
-        title: '澀谷夜生活：MEGAドン・キホーテ 渋谷本店 (DONKI 驚安殿堂) ＆ 返回 Airbnb',
-        description: '吃完燒肉步行至鄰近道玄坂 MEGA 唐吉訶德！多層樓面網羅各類美妝、藥妝、伴手禮零食、日本限定小物，現場支援免稅 Tax Free 退稅服務，隨後搭車返回 Airbnb 休息。',
+        title: '澀谷漫步：MEGA 唐吉訶德 澀谷本店 採買 ＆ 宮下公園',
+        description: '晚餐前前往道玄坂 MEGA 唐吉訶德！多層樓面網羅美妝保養、日本限定零食、動漫伴手禮，支援 Tax Free 免稅服務；或至 MIYASHITA PARK (宮下公園) 頂樓空中花園拍照打卡，準備準時赴約。',
         type: 'shopping',
         locations: [
           {
             name: 'MEGAドン・キホーテ 渋谷本店',
             url: 'https://maps.app.goo.gl/uaKs3HnYk8kjNiNJ7',
           },
+          {
+            name: 'MIYASHITA PARK (宮下公園)',
+            url: 'https://maps.google.com/?q=Miyashita+Park',
+          },
         ],
+      },
+      {
+        time: '20:00 - 21:45',
+        title: '【已確定預約 20:00 晚餐盛宴】燒肉內臟 Araiya 澀谷 (超人氣名店 · 2位)',
+        description: '準時 20:00 抵達（已確定預約 2 位）！澀谷極具盛名的 Tabelog 3.65+ 頂級燒肉名店！必點傳奇厚切牛舌、極上橫膈膜與新鮮醃漬內臟炭火現烤，入口即化肉汁四溢。',
+        type: 'food',
+        locations: [
+          {
+            name: '燒肉內臟 Araiya 澀谷 (Yakiniku Hormone Arai-ya)',
+            url: 'https://maps.google.com/?q=Yakiniku+Hormone+Arai-ya+Shibuya',
+          },
+          {
+            name: 'Araiya 澀谷 Tabelog 頁面',
+            url: 'https://tabelog.com/tw/tokyo/A1303/A130301/13237382/',
+          },
+        ],
+      },
+      {
+        time: '21:45 - 22:30',
+        title: '澀谷十字路口夜景散策 ➔ 搭車返回 Airbnb 休息',
+        description: '享用完頂級炭火燒肉後，散步至澀谷經典大十字路口感受東京繁華夜景，搭乘地鐵輕鬆返回 Airbnb 休息。',
+        type: 'transport',
       },
     ],
   },
   {
     date: '9/22 (二)',
-    title: '自然醒 ➔ 池袋大巡禮 (吉伊卡哇 15:00·太陽城·animate旗艦·隨性美食)',
+    title: '自然醒 ➔ 池袋大巡禮 (吉伊卡哇 15:00·animate旗艦·【人形町今半 19:30】)',
     activities: [
       {
         time: '10:30 - 11:15',
@@ -379,38 +393,44 @@ export const ITINERARY_DATA: DayPlan[] = [
         ],
       },
       {
-        time: '17:00 - 18:30',
-        title: 'animate 池袋總店 (動漫旗艦殿堂)',
-        description: '全球最大規模動漫旗艦店！9 層樓超豐富商品，從最新人氣動漫、輕小說、同人誌、模型到聲優 CD 一應俱全，採買完畢後漫步前往池袋西口。',
+        time: '17:00 - 19:00',
+        title: 'animate 池袋總店 ＆ 漫步至池袋西口東武百貨 (Tobu 15F)',
+        description: '全球最大規模動漫旗艦店！9 層樓超豐富商品，從最新人氣動漫、輕小說、同人誌、模型到聲優 CD 一應俱全，採買完畢後漫步前往西口東武百貨準備享用晚餐。',
         type: 'shopping',
         locations: [
           {
             name: 'animate 池袋總店',
             url: 'https://maps.app.goo.gl/X6RTGAWqGAXYnDTx9',
           },
+          {
+            name: '池袋 東武百貨 (Tobu 15F 餐廳街)',
+            url: 'https://maps.google.com/?q=Tobu+Department+Store+Ikebukuro',
+          },
         ],
       },
       {
-        time: '18:30 - 20:30',
-        title: '【隨到隨吃 · 免預約晚餐】池袋人氣美食隨選 (無敵家拉麵 / 炸牛元村 / 太陽城美食)',
-        description: '晚餐隨興自在享用，不排特定預約餐廳！池袋為東京著名平價美食聚集地：\n• 麵創房 無敵家：排隊名店炙烤厚叉燒豚骨拉麵。\n• 炸牛元村 (牛かつ もと村)：石板現烤酥脆和牛牛排。\n• 太陽城 / 東武西武百貨美食街：利久炭烤牛舌、排隊迴轉壽司或居酒屋，隨心挑選無時間拘束，飯後返回 Airbnb 休息。',
+        time: '19:30 - 21:30',
+        title: '【已確定預約 19:30 頂級和牛盛宴】人形町今半 池袋東武店 (2位)',
+        description: '準時 19:30 抵達池袋東武百貨 15F（已確定預約 2 位）！日本壽喜燒界殿堂級百年名店「人形町今半」！極上黑毛和牛由專業仲居桌邊現煮，油花如大理石般細膩均勻，裹上滑嫩生蛋液入口即化，享受極致奢華的味覺饗宴。',
         type: 'food',
         locations: [
           {
-            name: '麵創房 無敵家 (池袋東口)',
-            url: 'https://maps.google.com/?q=Mutekiya+Ikebukuro',
-          },
-          {
-            name: '炸牛元村 池袋店 (牛かつ もと村)',
-            url: 'https://maps.google.com/?q=Gyukatsu+Motomura+Ikebukuro',
+            name: '人形町今半 池袋東武店 (東武百貨 15F)',
+            url: 'https://maps.google.com/?q=Ningyocho+Imahan+Ikebukuro+Tobu',
           },
         ],
+      },
+      {
+        time: '21:30 - 22:30',
+        title: '池袋夜景散策 ➔ 搭乘電車返回 Airbnb 休息',
+        description: '品嚐完極品壽喜燒後，心滿意足散步回車站，搭乘電車返回住宿休息，為隔天晴空塔與銀座行程充飽體力。',
+        type: 'transport',
       },
     ],
   },
   {
     date: '9/23 (三)',
-    title: '晴空塔 ＆ 墨田水族館 ➔ 銀座【Sanrio World Ginza】➔ 頂級神戶牛【牛庵 19:00】',
+    title: '晴空塔 ＆ 墨田水族館 ➔ 銀座【Sanrio World Ginza】全球最大旗艦店 ＆ 銀座隨性美食',
     activities: [
       {
         time: '10:00 - 13:00',
@@ -465,25 +485,25 @@ export const ITINERARY_DATA: DayPlan[] = [
         ],
       },
       {
-        time: '19:00 - 21:00',
-        title: '【預約 19:00 頂級和牛晚餐】牛庵 銀座店 (Gyu-an · A5 神戶牛壽喜燒/牛排)',
-        description: '預約 19:00 享用銀座傳奇和牛名店！深藏於銀座六丁目地下的古民家風格老店（已加入代辦待預約 19:00），以嚴選頂級 A5 神戶牛排、神戶牛壽喜燒與極品漢堡排聞名，油花均勻細緻、入口即化，Tabelog 評分高達 3.7+ 的超高人氣肉食殿堂！',
+        time: '18:30 - 21:00',
+        title: '【隨到隨吃 · 免預約】銀座人氣美食隨選 (銀座篝雞白湯拉麵 / GINZA SIX / 炸豬排)',
+        description: '晚餐隨興自在挑選，免去預約時間壓力！推薦銀座周邊美食：\n• 銀座篝 (Ginza Kagari)：米其林指南推薦必吃超濃郁松露雞白湯拉麵。\n• GINZA SIX 6F 美食街：高雅日式天婦羅、壽司與和食。\n• 銀座梅林：老字號極厚酥脆炸豬排。\n• 西銀座百貨 / 有樂町 ITOCiA 美食街：平價拉麵與洋食簡餐。\n飯後悠閒散步漫遊銀座璀璨夜景，搭乘地鐵返回 Airbnb 休息。',
         type: 'food',
         locations: [
           {
-            name: '牛庵 銀座店 (Gyu-an)',
-            url: 'https://maps.google.com/?q=Gyuan+Ginza',
+            name: '銀座篝 本店 (Ginza Kagari)',
+            url: 'https://maps.google.com/?q=Ginza+Kagari',
           },
           {
-            name: '牛庵 Tabelog 頁面',
-            url: 'https://tabelog.com/tokyo/A1301/A130101/13002556/',
+            name: 'GINZA SIX 6F 美食街',
+            url: 'https://maps.app.goo.gl/e4f5T6u7m2b3c4x57',
           },
         ],
       },
       {
         time: '21:00 - 22:00',
         title: '銀座璀璨夜景漫步 ➔ 搭乘地鐵返回 Airbnb 休息',
-        description: '品嚐完神戶牛極致美味後，漫步感受銀座夜晚靜謐奢華的街道燈景，搭乘地鐵輕鬆返回住宿休息，為隔天清晨出發靜岡三島天空步道養精蓄銳。',
+        description: '漫步感受銀座夜晚靜謐奢華的街道燈景，搭乘地鐵輕鬆返回住宿休息，為隔天清晨出發靜岡三島天空步道養精蓄銳。',
         type: 'transport',
       },
     ],
@@ -747,6 +767,59 @@ export const TRAVEL_TIPS: TipCategory[] = [
       {
         subtitle: '免稅購物 (Tax Free) 最新出境規定',
         content: '在日本享 10% 退稅購買之消耗品（食品、藥妝等）會被店家密封在專用免稅袋內，出境日本前「絕對不可拆封使用」。海關在出境機場會透過護照連線核對免稅購買紀錄。',
+        highlight: true,
+      },
+    ],
+  },
+  {
+    id: 'dinner_guide',
+    title: '9 天每日晚餐地圖 ＆ 周邊人氣美食街推薦',
+    iconName: 'utensils',
+    badge: '9 天晚餐精選靈感',
+    items: [
+      {
+        subtitle: 'Day 1 (9/19 六) 抵達日 · 新宿大久保 / Airbnb 周邊晚鳥美食',
+        content: '抵達 Airbnb 放好行李約 20:30~21:00，適合不需預約的深夜美味：\n• 麵屋武藏 新宿總店：濃厚豚骨魚介拉麵與巨無霸炙燒叉燒。\n• 鳥貴族 (新宿/大久保店)：均一價平價美味炭火烤雞肉串居酒屋。\n• 新宿歌舞伎町：一蘭拉麵、敘敘苑燒肉、或大久保道地韓式現烤五花肉街。',
+        highlight: true,
+      },
+      {
+        subtitle: 'Day 2 (9/20 日) 三麗鷗彩虹樂園 ➔ 新宿南口 / 高島屋 / LUMINE 美食街',
+        content: '彩虹樂園閉園返回新宿約 18:30~19:30：\n• 新宿高島屋 12F~14F「Restaurants Park」：推薦名代豬排 Katsukura (酥脆炸豬排)、赤坂離宮中華料理、築地玉壽司。\n• LUMINE EST 7F~8F 美食街：和牛漢堡排、牛かつ もと村 (炸牛元村 新宿南口店)、AFURI 柚子鹽拉麵。\n• 新宿新南口 NEWoMan 美食區：藍瓶咖啡、手作窯烤披薩與日式居酒屋。',
+        highlight: true,
+      },
+      {
+        subtitle: 'Day 3 (9/21 一) 澀谷潮流日 · ⭐【已確定預約 20:00】燒肉內臟 Araiya 澀谷',
+        content: '★ 已確定預約 20:00（2位）！準時抵達道玄坂名店「燒肉內臟 Araiya 澀谷」，享用極品厚切牛舌與炭火現烤和牛內臟！\n• 備選/宵夜/周邊：澀谷 PARCO B1「CHAOS KITCHEN」地下美食街、MIYASHITA PARK「澀谷橫丁」復古大排檔居酒屋、極味屋鐵板漢堡排。',
+        highlight: true,
+      },
+      {
+        subtitle: 'Day 4 (9/22 二) 池袋動漫日 · ⭐【已確定預約 19:30】人形町今半 池袋東武店',
+        content: '★ 已確定預約 19:30（2位）！準時抵達池袋東武百貨 15F 餐廳街，品嚐創立於明治 28 年的國寶級「人形町今半」頂級黑毛和牛壽喜燒！\n• 備選/甜點/周邊：東武百貨 11F~15F 巨大美食街「SPICE」、太陽城 Sunshine City 美食街、麵創房無敵家拉麵、炸牛元村池袋店。',
+        highlight: true,
+      },
+      {
+        subtitle: 'Day 5 (9/23 三) 晴空塔 ➔ 銀座【Sanrio World Ginza】周邊隨興精緻晚餐',
+        content: '逛完西銀座三麗鷗世界旗艦店後 (18:30~21:00) 隨心挑選：\n• 銀座篝 (Ginza Kagari 本店)：米其林指南推薦必吃超濃郁松露雞白湯拉麵。\n• GINZA SIX 6F 美食街：高雅日式天婦羅、和牛壽喜燒、精緻壽司。\n• 銀座梅林：老字號酥脆厚切炸豬排；或煉瓦亭日式元祖洋食蛋包飯。\n• 有樂町 ITOCiA / LUMINE 美食街：平價日式定食、拉麵與居酒屋。',
+        highlight: true,
+      },
+      {
+        subtitle: 'Day 6 (9/24 四) 靜岡三島天空步道 ➔ 返抵東京站 / 新宿周邊晚餐',
+        content: '搭乘新幹線下午返回東京站或新宿 (18:00~20:00)：\n• 東京站一番街「東京拉麵街」：六厘舍沾麵、斑鳩拉麵、雷拉麵；或地下「黑塀橫丁」居酒屋。\n• 新宿 Omoide Yokocho (思出橫丁 / 回憶橫丁)：滿滿日式懷舊煙火氣息的炭火串燒與居酒屋小店。\n• 三島站在地名物（若返程前在靜岡吃）：三島鰻魚飯名店（櫻家鰻魚飯）、沼津港直送海鮮丼。',
+        highlight: true,
+      },
+      {
+        subtitle: 'Day 7 (9/25 五) 吉祥寺 ➔ 下北澤 ➔ 澀谷 / 新宿文青夜生活美食',
+        content: '逛完口琴橫丁與下北澤文青街後 (18:30~21:00)：\n• 吉祥寺口琴橫丁：肉之佐藤 (超人氣炸牛肉丸)、炭烤雞肉串與特色居酒屋小館。\n• 下北澤古著街：Magic Spice 湯咖哩、Rojiura Curry SAMURAI 濃厚野菜湯咖哩。\n• 新宿西口 / 歌舞伎町：利久炭烤牛舌定食、磯丸水產 (24hr 現烤活海鮮)。',
+        highlight: true,
+      },
+      {
+        subtitle: 'Day 8 (9/26 六) 東京迪士尼樂園全日遊 · 園區內外快餐與小吃攻略',
+        content: '全日輕鬆隨意吃，免去預約時間限制：\n• 園區必吃明星小吃：巨無霸煙燻火雞腿、米奇手套刈包、綠色三眼怪麻糬、限定口味造型爆米花桶。\n• 免排預約快速餐廳：明日樂園舞台餐廳（米奇造型漢堡）、頑熊餐廳（香濃咖哩飯）、紅心女王宴會廳。\n• 舞濱站外「Ikspiari 伊克斯皮兒莉」購物商城 4F 美食街：一風堂拉麵、青葉拉麵、美式牛排。',
+        highlight: true,
+      },
+      {
+        subtitle: 'Day 9 (9/27 日) 退房前往成田機場 · 航廈美食街與免稅伴手禮',
+        content: '11:00 接駁車直達成田機場，13:00~17:00 候機時光：\n• 成田機場第 1 / 第 2 航廈出境前美食街：富田沾麵 (中華蕎麥 とみた)、築地壽司岩、謝朋殿中華料理。\n• 出境管制區內免稅美食：星巴克、抹茶甜點焙茶霜淇淋、Fa-So-La 免稅店伴手禮試吃選購。',
         highlight: true,
       },
     ],
